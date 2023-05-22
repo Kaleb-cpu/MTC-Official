@@ -1,8 +1,8 @@
 
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
-  padding: 2rem;
+  /* padding: 2rem; */
   text-align: center;
 }
 
@@ -43,9 +43,10 @@
 }
 
 
-body {
+.bg {
   background-image: url(./media/homePage.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  width: 100vw;
   height: 95vh;
 }
