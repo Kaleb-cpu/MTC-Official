@@ -1,4 +1,4 @@
-import ReactDOM from "react-dom/client";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Nav from './pages/components/sections/Navbar'
