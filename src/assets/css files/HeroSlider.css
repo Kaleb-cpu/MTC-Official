@@ -1,0 +1,55 @@
+.container-style {
+    height: 95vh;
+
+    /* position: relative; */
+}
+
+@keyframes home {
+    0%   {color: white;}
+    25%  {color: #12eaa9;}
+    50%  {color: black;}
+    75% {color: #184687;}
+    100% {color: #06dbea;}
+  }
+
+.description {
+    /* width: 600px; */
+    /* position: absolute; */
+    /* z-index: 999; */
+    color: rgb(242, 205, 205);
+   /* text-align: center; */
+   top: 50%;
+   padding-top: 40rem;
+   
+    
+}
+
+.description h1{
+    font-size: 4rem;
+   animation-name: home;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+    
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35vh;
+}
+
+.carousel span {
+    width: 40px;
+    height: 12px;
+    margin-left: 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+
+.carousel span:hover {
+    box-shadow: 3px 2px 2px rgb(128, 96, 96);
+}
+

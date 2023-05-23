@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import Button from './Button';
-import logo from '../../../media/Logo.png'
+import logo from '/media/Logo.png';
+import '../../../assets/css files/App.css'
 
 const navStyle = {
-  backgroundColor: '#1f3b62',
   opacity: .6
   
 }
@@ -18,7 +18,7 @@ const Nav = () => {
     let [open,setOpen]=useState(false);
   return (
     <div style={navStyle} className='shadow-md w-full fixed top-0 left-0'>
-      <div className='md:flex items-center justify-between py-4 md:px-10 px-7'>
+      <div className='primary-background md:flex items-center justify-between py-4 md:px-10 px-7'>
       <div className=''>
         <img src={logo} className="App-logo" width={150} alt="logo" />
       </div>
@@ -31,7 +31,7 @@ const Nav = () => {
         {
           Links.map((link)=>(
             <li key={link.name} className='md:ml-8 text-xl md:my-0 my-7'>
-              <a href={link.link} className='text-white hover:text-gray-400 duration-500'>{link.name}</a>
+              <a href={link.link} className='font-bold hover:text-gray-400 duration-500'>{link.name}</a>
             </li>
           ))
         }
