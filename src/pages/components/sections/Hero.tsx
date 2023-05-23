@@ -25,9 +25,9 @@ export default function Hero() {
     // width:'100vw'
   };
 
-  const goToNext = (currentState) => {
-    setCurrentState(currentState);
-  };
+  // const goToNext = (currentState) => {
+  //   setCurrentState(currentState);
+  // };
 
   return (
     <div className="container-style">
