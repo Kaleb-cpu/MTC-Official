@@ -1,39 +1,71 @@
-.container-style {
-    height: 95vh;
 
-    /* position: relative; */
+.container-style {
+    height: 100vh;
+    text-align: center;
+
+    position: relative;
 }
 
 @keyframes home {
-    0%   {color: white;}
-    25%  {color: #12eaa9;}
-    50%  {color: black;}
-    75% {color: #184687;}
-    100% {color: #06dbea;}
+    0%   {box-shadow: #1F3B62 0px 20px 55px, #1F3B62 0px -12px 30px, #1F3B62 0px 4px 6px, #1F3B62 0px 12px 13px, #1F3B62 0px -3px 5px;}
+    50%   {box-shadow: #657DEE 0px 20px 55px, #657DEE 0px -12px 30px, #657DEE 0px 4px 6px, #657DEE 0px 12px 13px, #657DEE 0px -3px 5px;}
+    100%  {box-shadow: #1FD1F9 0px 20px 55px, #1FD1F9 0px -12px 30px, #1FD1F9 0px 4px 6px, #1FD1F9 0px 12px 13px, #1FD1F9 0px -3px 5px;}
+
+    
+    /* 50%  {box-shadow: 0px 54px 55px #184687;}
+    75% {box-shadow: 0px 54px 55px #184687;}
+    100% {box-shadow: 0px 54px 55px #06dbea;} */
   }
 
-.description {
-    /* width: 600px; */
-    /* position: absolute; */
-    /* z-index: 999; */
-    color: rgb(242, 205, 205);
-   /* text-align: center; */
-   top: 50%;
-   padding-top: 40rem;
-   
-    
+
+
+
+.hero-background-color {
+     background-color: #1F3B62;
+     height: 100vh;
+     opacity: 0.5;
 }
 
 .description h1{
-    font-size: 4rem;
+ 
    animation-name: home;
-  animation-duration: 15s;
+  animation-duration: 7s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+  position: absolute;
+  top: 60%;
+ left: 38%;
+  max-width: max-content;
+
+  border-radius: 60px;
+  /* box-shadow: rgb(255, 255, 255) 0px 54px 55px, rgb(255, 255, 255) 0px -12px 30px, rgb(243, 243, 243) 0px 4px 6px, rgb(255, 255, 255) 0px 12px 13px, rgb(251, 251, 251) 0px -3px 5px; */
+}
+
+.shadow {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	color: #fff;
+	text-align: center;
+	font-size: 4rem;
+	font-weight: bold;
+    padding: 0.3em;
+	/* width: 400px;
+	height: 250px; */
+	/* background: linear-gradient(0deg, #000, #262626); */
+    
     
 }
 
-.carousel {
+
+.shadow:after {
+	filter: blur(20px);
+}
+
+
+
+/* .carousel {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,5 +83,6 @@
 
 .carousel span:hover {
     box-shadow: 3px 2px 2px rgb(128, 96, 96);
-}
+} */
+
 

@@ -31,11 +31,17 @@ export default function Hero() {
 
   return (
     <div className="container-style">
-      <div style={bgImageStyle}>
+      <div style={bgImageStyle} className="hero-bg">
+        <div className="hero-background-color">
+
+        </div>
         {" "}
+        </div>
         <div className="description">
           
-            <h1>Welcome HOME</h1>
+         
+          <h1 className="shadow font-home">Welcome HOME</h1>
+            
           {/* <div className="carousel">
             {imageSlide.map((imageSlide, currentState) => (
               <span
@@ -46,7 +52,6 @@ export default function Hero() {
             ))}
           </div> */}
           </div>
-        </div>
         </div>
 
      
