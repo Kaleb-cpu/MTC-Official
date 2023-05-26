@@ -1,41 +1,73 @@
 import { useState } from 'react'
+import DropDown from '../DropDown'
+import '../../assets/css files/NavBar.css'
 import Button from '../Button';
 import logo from '/media/Logo.png';
 import '../../assets/css files/App.css'
 import { Outlet, Link } from "react-router-dom";
 
 
-const Nav = () => {
-    let links =[
-      {name:"Home",  to:"/"},
-      {name:"Rentals", to:"/FacilityRentals"},
-      {name:"Childcare", to:"/Childcare"},
-      {name:"Around Towne", to:"/AroundTowne"},
-      {name:"About", to:"/About"},
-    ];
-    let [open,setOpen]=useState(false);
+function Navbar () {
+  const [click, setClick] = useState(false)
+  const [dropdown, setDropdown] = useState(false)
+  const changeClick = () => setClick(!click)
+  const closeMobileMenu = () => setClick(false)
+
+  const onMouseEnter = () => {
+      setDropdown(true)
+  }
+
+  const onMouseLeave = () => {
+      setDropdown(false)
+  }
+
   return (
-    <div className='w-full top-0 left-0'>
-      <div className='primary-background md:flex items-center justify-between py-4 md:px-10 px-7'>
-      <div className=''>
-        <img src={logo} className="App-logo" width={150} alt="logo" />
-      </div>
-      
-      <div onClick={()=>setOpen(!open)} className='text-3xl absolute right-8 top-6 cursor-pointer md:hidden'>
-      {/* <ion-icon name={open ? 'close':'menu'}></ion-icon> */}
-      </div>
+      <>
+          <section>
+              <nav className="navbar">
+
+                  <Link to='/' className='logo'><img src="/media/Logo.png" width={150} alt="MTC Logo" /> </Link>
+                  <div className="menu-icon" onClick={changeClick}>
+                      <i className={click ? 'fas fa-times' : 'fas fa-bars'} ></i>
+                  </div>
 
 
-      <div>
-         {links.map(link => (<Link to={link.to} className='pl-5 text-xl text-white'>{link.name}</Link> ))}
-      </div>
-        <Button>
-          Resident info
-        </Button>
-      </div>
-      <Outlet />
-    </div>
+                  <ul className={click ? 'nav-side-menu start' : 'nav-side-menu'}>
+
+                      <li className='nav-items'>
+                          <Link to="/" className='nav-links home' onClick={closeMobileMenu}> Home </Link>
+                      </li>
+
+                      <li className='nav-items'>
+                          <Link to="/rentals" className='nav-links rentals' onClick={closeMobileMenu}> Rentals </Link>
+                      </li>
+
+                      <li className='nav-items' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >
+                          {/* <Link className='nav-links childcare' onClick={closeMobileMenu}> Childcare <i className='fas fa-caret-down' />
+                              {dropdown && <DropDown />}
+                          </Link> */}
+                      </li>
+
+                      <li className='nav-items'>
+                          <Link to="/AroundTowne" className='nav-links aroundTown' onClick={closeMobileMenu}> Around Town </Link>
+                      </li>
+
+                      <li className='nav-items'>
+                          <Link to="/About" className='nav-links about' onClick={closeMobileMenu}> About </Link>
+                      </li>
+
+                      <li className='nav-items'>
+                          <Link to="/ResidentInfo" className='nav-links-button' onClick={closeMobileMenu}> Resident info </Link>
+                      </li>
+                  </ul>
+
+                  {/* <Button /> */}
+
+
+              </nav>
+          </section>
+      </>
   )
 }
 
-export default Nav
+export default Navbar

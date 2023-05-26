@@ -1,6 +1,6 @@
 
 
-export default function FacilityRentals ()  {
+export default function Rentals ()  {
 
         return (
             <div>
