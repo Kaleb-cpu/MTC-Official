@@ -32,17 +32,12 @@ export default function Hero() {
   return (
     <div className="container-style">
       <div style={bgImageStyle} className="hero-bg">
-        <div className="hero-background-color">
+        <div className="hero-background-color"></div>{" "}
+      </div>
+      <div className="description">
+        <h1 className="shadow font-home">Welcome HOME</h1>
 
-        </div>
-        {" "}
-        </div>
-        <div className="description">
-          
-         
-          <h1 className="shadow font-home">Welcome HOME</h1>
-            
-          {/* <div className="carousel">
+        {/* <div className="carousel">
             {imageSlide.map((imageSlide, currentState) => (
               <span
                 className="primary-background"
@@ -51,10 +46,7 @@ export default function Hero() {
               ></span>
             ))}
           </div> */}
-          </div>
-        </div>
-
-     
-  
+      </div>
+    </div>
   );
 }

@@ -1,10 +1,8 @@
 .App {
   text-align: center;
   height: 100vh;
-  background-color: #1F3B62;
+  background-color: #1f3b62;
 }
-
-
 
 #root {
   /* max-width: 1280px; */
@@ -49,7 +47,6 @@
   color: #888;
 }
 
-
 .bg {
   background-image: url(./media/homePage.jpg);
   background-repeat: no-repeat;
@@ -58,14 +55,14 @@
   height: 95vh;
 }
 
-.primary{
-  color: #1F3B62;
+.primary {
+  color: #1f3b62;
 }
 
-.secondary{
-  color: #A80532;;
+.secondary {
+  color: #a80532;
 }
 
 .primary-background {
-  background-color: #1F3B62;
+  background-color: #1f3b62;
 }

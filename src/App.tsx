@@ -13,14 +13,13 @@ export default function App() {
     <Router>
       <Navbar />
       <Routes>
-          <Route index element={<Home />} />
-          <Route path="Rentals" element={<Rentals />} />
-          <Route path="Childcare" element={<ChildCare />} />
-          <Route path="AroundTowne" element={<AroundTowne />} />
-          <Route path="About" element={<About />} />
-          <Route path="*" element={<PageNotFound />} />
+        <Route index element={<Home />} />
+        <Route path="Rentals" element={<Rentals />} />
+        <Route path="Childcare" element={<ChildCare />} />
+        <Route path="AroundTowne" element={<AroundTowne />} />
+        <Route path="About" element={<About />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </Router>
   );
 }
-
