@@ -1,14 +1,14 @@
 import { useState } from 'react'
-import Button from './Button';
+import Button from '../Button';
 import logo from '/media/Logo.png';
-import '../../../assets/css files/App.css'
+import '../../assets/css files/App.css'
 import { Outlet, Link } from "react-router-dom";
 
 
 const Nav = () => {
     let links =[
       {name:"Home",  to:"/"},
-      {name:"Facility Rentals", to:"/FacilityRentals"},
+      {name:"Rentals", to:"/FacilityRentals"},
       {name:"Childcare", to:"/Childcare"},
       {name:"Around Towne", to:"/AroundTowne"},
       {name:"About", to:"/About"},
