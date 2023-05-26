@@ -1,6 +1,6 @@
 import "../assets/css files/App.css";
 import { useEffect, useState } from "react";
-import "../assets/css files/HeroSection.css";
+import "../assets/css files/herosection.css";
 import imageSlide from "../assets/data files/HeroSection_data";
 
 export default function Hero() {

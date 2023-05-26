@@ -1,10 +1,8 @@
 import { useState } from 'react'
 import DropDown from '../DropDown'
 import '../../assets/css files/NavBar.css'
-import Button from '../Button';
-import logo from '/media/Logo.png';
 import '../../assets/css files/App.css'
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 function Navbar () {
@@ -42,15 +40,15 @@ function Navbar () {
                           <Link to="/rentals" className='nav-links rentals' onClick={closeMobileMenu}> Rentals </Link>
                       </li>
 
+                      <li className='nav-items'>
+                          <Link to="/Childcare" className='nav-links aroundTown' onClick={closeMobileMenu}> Child Care </Link>
+                      </li>
                       <li className='nav-items' onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >
-                          {/* <Link className='nav-links childcare' onClick={closeMobileMenu}> Childcare <i className='fas fa-caret-down' />
+                          <Link className='nav-links childcare' onClick={closeMobileMenu}> Around Towne <i className='fas fa-caret-down' />
                               {dropdown && <DropDown />}
-                          </Link> */}
+                          </Link>
                       </li>
 
-                      <li className='nav-items'>
-                          <Link to="/AroundTowne" className='nav-links aroundTown' onClick={closeMobileMenu}> Around Town </Link>
-                      </li>
 
                       <li className='nav-items'>
                           <Link to="/About" className='nav-links about' onClick={closeMobileMenu}> About </Link>
@@ -58,12 +56,8 @@ function Navbar () {
 
                       <li className='nav-items'>
                           <Link to="/ResidentInfo" className='nav-links-button' onClick={closeMobileMenu}> Resident info </Link>
-                      </li>
+                      </li> 
                   </ul>
-
-                  {/* <Button /> */}
-
-
               </nav>
           </section>
       </>
