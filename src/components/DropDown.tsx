@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import AroundTowneItems from "./Around-Towne-Items";
+import AroundTowne from "./MenuItems";
 import "../assets/css files/dropdown.css";
 
 function DropDown() {
@@ -15,7 +15,7 @@ function DropDown() {
           onClick={handleClick}
           className={click ? "drop-menu" : "dropdown-menu"}
         >
-          {AroundTowneItems.map((item, index) => {
+          {AroundTowne.map((item, index) => {
             return (
               <li key={index}>
                 <Link

@@ -1,7 +1,7 @@
 import { useState } from "react";
-import DropDown from "../DropDown";
-import "../../assets/css files/NavBar.css";
-import "../../assets/css files/App.css";
+import DropDown from "../components/DropDown";
+import "../assets/css files/NavBar.css";
+import "../assets/css files/App.css";
 import { Link } from "react-router-dom";
 
 function Navbar() {
@@ -14,7 +14,7 @@ function Navbar() {
     setDropdown(true);
   };
 
-  const onMouseLeave = () => {
+  const onClick = () => {
     setDropdown(false);
   };
 
@@ -61,7 +61,7 @@ function Navbar() {
             <li
               className="nav-items"
               onMouseEnter={onMouseEnter}
-              onMouseLeave={onMouseLeave}
+              onClick={onClick}
             >
               <Link
                 to=""
