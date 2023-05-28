@@ -10,11 +10,11 @@ function Navbar() {
   const changeClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
-  const onMouseEnter = () => {
+  const onClick = () => {
     setDropdown(true);
   };
 
-  const onClick = () => {
+  const onMouseLeave = () => {
     setDropdown(false);
   };
 
@@ -60,8 +60,8 @@ function Navbar() {
             </li>
             <li
               className="nav-items"
-              onMouseEnter={onMouseEnter}
               onClick={onClick}
+              onMouseLeave={onMouseLeave}
             >
               <Link
                 to=""
