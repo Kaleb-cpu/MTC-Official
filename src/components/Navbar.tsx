@@ -2,6 +2,8 @@ import { useState } from "react";
 import "../assets/css files/NavBar.css";
 import "../assets/css files/App.css";
 import { Link } from "react-router-dom";
+import Dropdown from 'react-bootstrap/Dropdown';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -52,14 +54,19 @@ function Navbar() {
             <li
               className="Nav-items"
             >
-              <Link
-                to=""
-                className="Nav-links aroundTown"
-                onClick={closeMobileMenu}
-              >
-                {" "}
-                Around Towne <i className="fas fa-caret-down" />
-              </Link>
+                <Dropdown>
+      <Dropdown.Toggle className="Nav-links aroundTown" id="dropdown-basic">
+        Around Towne
+      </Dropdown.Toggle>
+
+      <Dropdown.Menu>
+        <Dropdown.Item href="/Ice Surface">Ice Surface</Dropdown.Item>
+        <Dropdown.Item href="/Political Contacts">Political Contacts</Dropdown.Item>
+        <Dropdown.Item href="/Ponds Pathways">Ponds & Pathways</Dropdown.Item>
+        <Dropdown.Item href="/Emergency">Emergency</Dropdown.Item>
+        <Dropdown.Item href="/Crime Stats">Crime Stats</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
             </li>
 
             <li className="Nav-items">

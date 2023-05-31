@@ -28,16 +28,25 @@
     
 }
 
+@media screen and (max-width: 768px) {
+  .under-fold {
+    grid-template-columns: 1fr;
+  }
+.cards{
+  margin-top: 1em;
+  border-left: none !important;
+}
+}
+
 .carousel-parent{
-  width: 70%;
+  width: 100%;
   margin-left: 1em;
-  
 }
 
 .carousel-item img{
     object-fit: cover;
     object-position: center;
-    width: 100%;
+    width: clamp(30%, 100vw, 100%);
     height: 100vh;
     overflow: hidden;
 }
