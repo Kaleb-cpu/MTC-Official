@@ -1,3 +1,9 @@
+:root {
+  --primary: #1f3b62;
+  --secondary: #ff6457;
+  --teritary: #f1ff57;
+}
+
 .App {
   text-align: center;
   height: 100vh;

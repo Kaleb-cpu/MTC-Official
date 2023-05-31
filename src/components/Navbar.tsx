@@ -1,46 +1,37 @@
 import { useState } from "react";
-import DropDown from "../components/DropDown";
 import "../assets/css files/NavBar.css";
 import "../assets/css files/App.css";
 import { Link } from "react-router-dom";
 
 function Navbar() {
   const [click, setClick] = useState(false);
-  const [dropdown, setDropdown] = useState(false);
   const changeClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
-  const onClick = () => {
-    setDropdown(true);
-  };
-
-  const onMouseLeave = () => {
-    setDropdown(false);
-  };
 
   return (
     <>
       <section>
-        <nav className="navbar">
-          <Link to="/" className="logo">
+        <nav className="Nav">
+          <Link to="/" className="Logo">
             <img src="/media/Logo.png" width={150} alt="MTC Logo" />{" "}
           </Link>
           <div className="menu-icon" onClick={changeClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
           </div>
 
-          <ul className={click ? "nav-side-menu start" : "nav-side-menu"}>
-            <li className="nav-items">
-              <Link to="/" className="nav-links home" onClick={closeMobileMenu}>
+          <ul className={click ? "Nav-side-menu start" : "Nav-side-menu"}>
+            <li className="Nav-items">
+              <Link to="/" className="Nav-links home" onClick={closeMobileMenu}>
                 {" "}
                 Home{" "}
               </Link>
             </li>
 
-            <li className="nav-items">
+            <li className="Nav-items">
               <Link
                 to="/rentals"
-                className="nav-links rentals"
+                className="Nav-links rentals"
                 onClick={closeMobileMenu}
               >
                 {" "}
@@ -48,10 +39,10 @@ function Navbar() {
               </Link>
             </li>
 
-            <li className="nav-items">
+            <li className="Nav-items">
               <Link
                 to="/Childcare"
-                className="nav-links aroundTown"
+                className="Nav-links childcare"
                 onClick={closeMobileMenu}
               >
                 {" "}
@@ -59,25 +50,22 @@ function Navbar() {
               </Link>
             </li>
             <li
-              className="nav-items"
-              onClick={onClick}
-              onMouseLeave={onMouseLeave}
+              className="Nav-items"
             >
               <Link
                 to=""
-                className="nav-links childcare"
+                className="Nav-links aroundTown"
                 onClick={closeMobileMenu}
               >
                 {" "}
                 Around Towne <i className="fas fa-caret-down" />
-                {dropdown && <DropDown />}
               </Link>
             </li>
 
-            <li className="nav-items">
+            <li className="Nav-items">
               <Link
                 to="/About"
-                className="nav-links about"
+                className="Nav-links about"
                 onClick={closeMobileMenu}
               >
                 {" "}
@@ -85,10 +73,10 @@ function Navbar() {
               </Link>
             </li>
 
-            <li className="nav-items">
+            <li className="Nav-items">
               <Link
                 to="/ResidentInfo"
-                className="nav-links-button"
+                className="Nav-links-button"
                 onClick={closeMobileMenu}
               >
                 {" "}

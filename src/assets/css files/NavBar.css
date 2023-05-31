@@ -1,11 +1,11 @@
 :root {
   --primary: #1f3b62;
-  --secondary: #a80532;
-  --styling: #60daaa;
+  --secondary: #C3906E;
+  --teritary: #E5E7DD;
+  --fourth: #EAC25E;
 }
-
 /* Navbar style and positioning */
-.navbar {
+.Nav {
   position: relative;
   height: 85px;
   display: flex;
@@ -14,21 +14,23 @@
 
   background: var(--primary);
   font-size: 20px;
-  box-shadow: 1px 2px 5px var(--styling);
+  box-shadow: 1px 2px 5px var(--secondary);
 }
 
 /* logo styling */
-.logo {
+.Logo {
   cursor: pointer;
+  padding-top: 0.2em;
+  margin-left: 0.5em;
 }
 
-/* nav menu container */
-.nav-side-menu {
+/* Nav menu container */
+.Nav-side-menu {
   display: flex;
 }
 
 /* nav links style and position */
-.nav-links {
+.Nav-links {
   position: relative;
   vertical-align: middle;
 
@@ -42,9 +44,9 @@
   transition: all 0.3s ease-out;
 }
 
-/* nav links before and after */
-.nav-links::before,
-.nav-links::after {
+/* Nav links before and after */
+.Nav-links::before,
+.Nav-links::after {
   /* box-sizing: inherit; */
   content: "";
   position: absolute;
@@ -52,8 +54,8 @@
 
 /*
 Cool hover animation
-for the nav links
-each nav link has its own animation
+for the Nav links
+each Nav link has its own animation
 */
 
 /* HOME */
@@ -76,7 +78,7 @@ each nav link has its own animation
   right: 0;
 }
 .home:hover {
-  color: var(--styling);
+  color: var(--secondary);
 }
 .home:hover::before,
 .home:hover::after {
@@ -84,13 +86,13 @@ each nav link has its own animation
   height: 100%;
 }
 .home:hover::before {
-  border-top-color: var(--styling);
-  border-right-color: var(--styling);
+  border-top-color: var(--secondary);
+  border-right-color: var(--secondary);
   transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
 }
 .home:hover::after {
-  border-bottom-color: var(--styling);
-  border-left-color: var(--styling);
+  border-bottom-color: var(--secondary);
+  border-left-color: var(--secondary);
   transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s,
     height 0.25s ease-out 0.75s;
 }
@@ -116,7 +118,7 @@ each nav link has its own animation
   right: 0;
 }
 .rentals:hover {
-  color: var(--styling);
+  color: var(--secondary);
 }
 .rentals:hover::before,
 .rentals:hover::after {
@@ -124,17 +126,56 @@ each nav link has its own animation
   height: 100%;
 }
 .rentals:hover::before {
-  border-top-color: var(--styling);
-  border-right-color: var(--styling);
+  border-top-color: var(--secondary);
+  border-right-color: var(--secondary);
   transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
 }
 .rentals:hover::after {
-  border-bottom-color: var(--styling);
-  border-left-color: var(--styling);
+  border-bottom-color: var(--secondary);
+  border-left-color: var(--secondary);
   transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s,
     height 0.25s ease-out 0.75s;
 }
 
+/* Childcare */
+
+.childcare {
+ transition: color 0.25s;
+}
+.childcare::before,
+.childcare::after {
+ border: 2px solid transparent;
+ border-radius: 3px;
+ width: 0;
+ height: 0;
+}
+.childcare::before {
+ top: 0;
+ left: 0;
+}
+.childcare::after {
+ bottom: 0;
+ right: 0;
+}
+.childcare:hover {
+ color: var(--secondary);
+}
+.childcare:hover::before,
+.childcare:hover::after {
+ width: 100%;
+ height: 100%;
+}
+.childcare:hover::before {
+ border-top-color: var(--secondary);
+ border-right-color: var(--secondary);
+ transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+.childcare:hover::after {
+ border-bottom-color: var(--secondary);
+ border-left-color: var(--secondary);
+ transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s,
+   height 0.25s ease-out 0.75s;
+}
 /* AROUND TOWN */
 
 .aroundTown {
@@ -156,7 +197,7 @@ each nav link has its own animation
   right: 0;
 }
 .aroundTown:hover {
-  color: var(--styling);
+  color: var(--secondary);
 }
 .aroundTown:hover::before,
 .aroundTown:hover::after {
@@ -164,13 +205,13 @@ each nav link has its own animation
   height: 100%;
 }
 .aroundTown:hover::before {
-  border-top-color: var(--styling);
-  border-right-color: var(--styling);
+  border-top-color: var(--secondary);
+  border-right-color: var(--secondary);
   transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
 }
 .aroundTown:hover::after {
-  border-bottom-color: var(--styling);
-  border-left-color: var(--styling);
+  border-bottom-color: var(--secondary);
+  border-left-color: var(--secondary);
   transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s,
     height 0.25s ease-out 0.75s;
 }
@@ -196,7 +237,7 @@ each nav link has its own animation
   right: 0;
 }
 .about:hover {
-  color: var(--styling);
+  color: var(--secondary);
 }
 .about:hover::before,
 .about:hover::after {
@@ -204,19 +245,20 @@ each nav link has its own animation
   height: 100%;
 }
 .about:hover::before {
-  border-top-color: var(--styling);
-  border-right-color: var(--styling);
+  border-top-color: var(--secondary);
+  border-right-color: var(--secondary);
   transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
 }
 .about:hover::after {
-  border-bottom-color: var(--styling);
-  border-left-color: var(--styling);
+  border-bottom-color: var(--secondary);
+  border-left-color: var(--secondary);
   transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s,
     height 0.25s ease-out 0.75s;
 }
 
-/* nav items containers */
-.nav-items {
+
+/* Nav items containers */
+.Nav-items {
   display: flex;
 }
 
@@ -225,23 +267,24 @@ each nav link has its own animation
 }
 
 /* resident info button */
-.nav-links-button {
-  background-color: #fff;
+.Nav-links-button {
+  background-color: var(--secondary);
+  color: var(--primary);
   padding: 0.2em;
   border-radius: 7px;
-  font-weight: bold;
+ 
 }
 
 @media screen and (min-width: 1000px) {
-  .nav-links-button {
+  .Nav-links-button {
     margin-left: 20rem;
     margin-right: 1rem;
   }
 }
 
-.nav-links-button:hover {
-  filter: drop-shadow(0 0 2em var(--styling));
-  color: var(--styling);
+.Nav-links-button:hover {
+  filter: drop-shadow(0 0 2em var(--secondary));
+  color: var(--secondary);
   background-color: var(--primary);
   transition: 0.7s ease-in-out;
 }
@@ -253,7 +296,7 @@ each nav link has its own animation
 /* break point */
 
 @media screen and (max-width: 1000px) {
-  .nav-side-menu {
+  .Nav-side-menu {
     display: flex;
     flex-direction: column;
     width: 250px;
@@ -268,14 +311,14 @@ each nav link has its own animation
     justify-content: flex-start;
   }
 
-  .nav-side-menu.start {
-    background: var(--secondary);
+  .Nav-side-menu.start {
+    background: var(--primary);
     left: 0;
-    opacity: 0.8;
+    opacity: 0.95;
     transition: all 0.5s ease;
   }
 
-  .nav-links {
+  .Nav-links {
     text-align: center;
     padding: 1.5rem;
     width: 100%;
@@ -284,7 +327,7 @@ each nav link has its own animation
     transition: 0s;
   }
 
-  .nav-links:hover {
+  .Nav-links:hover {
     color: #fff;
   }
 
@@ -310,7 +353,7 @@ each nav link has its own animation
     font-size: 2rem;
   }
 
-  .nav-links-button {
+  .Nav-links-button {
     display: block;
     padding: 12px 30px;
     margin: 25px auto;
@@ -321,7 +364,7 @@ each nav link has its own animation
     font-size: 1.3rem;
   }
 
-  .nav-items {
+  .Nav-items {
     height: auto;
   }
 }
