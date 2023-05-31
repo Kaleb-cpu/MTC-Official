@@ -26,7 +26,7 @@
     font-family: "Poppins", sans-serif;
     padding: 4rem 0; }
     .border-bottom {
-        border-bottom: 2px solid var(--fourth);
+        border-bottom: 2px solid var(--primary);
     }
     .footer-59391 .site-logo a {
       font-size: 3rem;

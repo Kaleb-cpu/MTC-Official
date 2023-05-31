@@ -3,7 +3,8 @@ import "../assets/css files/NavBar.css";
 import "../assets/css files/App.css";
 import { Link } from "react-router-dom";
 import Dropdown from 'react-bootstrap/Dropdown';
-import "bootstrap/dist/css/bootstrap.min.css";
+
+// import "bootstrap/dist/css/bootstrap.min.css";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -56,7 +57,7 @@ function Navbar() {
             >
                 <Dropdown>
       <Dropdown.Toggle className="Nav-links aroundTown" id="dropdown-basic">
-        Around Towne
+        <div  > Around Towne </div>
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
@@ -79,7 +80,6 @@ function Navbar() {
                 About{" "}
               </Link>
             </li>
-
             <li className="Nav-items">
               <Link
                 to="/ResidentInfo"
@@ -90,6 +90,7 @@ function Navbar() {
                 Resident info{" "}
               </Link>
             </li>
+
           </ul>
         </nav>
       </section>

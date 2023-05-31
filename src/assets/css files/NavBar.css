@@ -3,13 +3,15 @@
   --secondary: #C3906E;
   --teritary: #E5E7DD;
   --fourth: #EAC25E;
+  --navbar-font-size: 1.4rem;
+  --navbar-font-family: font-family: 'Inter', sans-serif;
 }
 /* Navbar style and positioning */
 .Nav {
   position: relative;
   height: 85px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 30% 1fr;
   align-items: center;
 
   background: var(--primary);
@@ -22,6 +24,7 @@
   cursor: pointer;
   padding-top: 0.2em;
   margin-left: 0.5em;
+  
 }
 
 /* Nav menu container */
@@ -30,17 +33,16 @@
 }
 
 /* nav links style and position */
-.Nav-links {
-  position: relative;
-  vertical-align: middle;
+.Nav-links, .btn {
+  position: relative !important;
 
-  box-sizing: border-box;
+  box-sizing: border-box !important;
 
-  font-size: inherit;
-  font-weight: 700;
-  color: white;
-  text-decoration: none;
-  padding: 8px 20px;
+  font-size: var(--navbar-font-size) !important;
+  font-family: var(--navbar-font-family) !important;
+  color: var(--teritary) !important;
+  text-decoration: none !important;
+  padding: 8px 20px !important;
   transition: all 0.3s ease-out;
 }
 
@@ -222,6 +224,17 @@ each Nav link has its own animation
 }
 
 
+.btn {
+  font-size: var(--navbar-font-size) !important;
+  color: var(--teritary) !important;
+  
+  padding: 8px 20px !important;
+  transition: all 0.3s ease-out !important;
+  border: none !important;
+  font-family: var(--navbar-font-family) !important;
+  
+}
+
 /* ABOUT */
 
 .about {
@@ -278,14 +291,17 @@ each Nav link has its own animation
   color: var(--primary);
   padding: 0.2em;
   border-radius: 7px;
+  height: max-content !important;
+  margin-top: 0.3em;
+  
  
 }
 
 @media screen and (min-width: 1000px) {
-  .Nav-links-button {
+  /* .Nav-links-button {
     margin-left: 20rem;
     margin-right: 1rem;
-  }
+  } */
 }
 
 .Nav-links-button:hover {
