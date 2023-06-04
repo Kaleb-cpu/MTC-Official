@@ -1,0 +1,74 @@
+.title {
+    position: relative;
+	margin-bottom: 40px;
+	padding-bottom: 25px;
+	text-transform: uppercase;
+	font-weight: 700;
+    font-size: 17px;
+	font-weight: 700;
+	letter-spacing: 0.02em;
+	line-height: 1.8em;
+}
+.title:before {
+    content: "";
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 140px;
+	height: 1px;
+	background-color: var(--fourth);
+}
+
+.span-title {
+    color: var(--fourth);
+}
+
+.title:after { 
+    content: "";
+	position: absolute;
+	bottom: -1px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 45px;
+	height: 3px;
+	background-color: var(--fourth);
+}
+
+.single-service {
+    margin-top: 40px;
+	background-color: #24252a;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    padding: 40px 40px 25px;
+	border-bottom: 2px solid #1d1e23;
+    margin-bottom: 25px;
+	color: var(--fourth);
+    font-size: 17px;
+	font-weight: 700;
+	letter-spacing: 0.02em;
+	line-height: 1.8em;
+}
+
+.font-1 {
+    font-family: 'IBM Plex Sans Arabic';
+  }
+  
+  .font-2 {
+    font-family: 'Inter';
+  }
+  
+  .font-3 {
+    font-family: 'Lilita One';
+  }
+  
+  .font-4 {
+    font-family: 'Mogra';
+  }
+  
+  .font-5 {
+    font-family: 'Roboto Condensed';
+  }
+  
+  .font-6 {
+    font-family: 'Ubuntu Condensed';
+  }

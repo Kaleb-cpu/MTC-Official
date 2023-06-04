@@ -1,7 +1,10 @@
 :root {
   --primary: #1f3b62;
-  --secondary: #ff6457;
-  --teritary: #f1ff57;
+  --secondary: #C3906E;
+  --teritary: #E5E7DD;
+  --fourth: #EAC25E;
+  --navbar-font-size: 1.4rem;
+  --navbar-font-family: font-family: 'Inter';
 }
 
 .App {
@@ -62,13 +65,45 @@
 }
 
 .primary {
-  color: #1f3b62;
+  color: var(--primary);
 }
 
 .secondary {
-  color: #a80532;
+  color: var(--secondary);
+}
+
+.teritary {
+  color: var(--teritary);
+}
+
+.fourth {
+  color: var(--fourth);
 }
 
 .primary-background {
   background-color: #1f3b62;
+}
+
+.font-1 {
+  font-family: 'IBM Plex Sans Arabic';
+}
+
+.font-2 {
+  font-family: 'Inter';
+}
+
+.font-3 {
+  font-family: 'Lilita One';
+}
+
+.font-4 {
+  font-family: 'Mogra';
+}
+
+.font-5 {
+  font-family: 'Roboto Condensed';
+}
+
+.font-6 {
+  font-family: 'Ubuntu Condensed';
 }
