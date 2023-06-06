@@ -1,18 +1,12 @@
-:root {
-  --primary: #1f3b62;
-  --secondary: #C3906E;
-  --teritary: #E5E7DD;
-  --fourth: #EAC25E;
-  --navbar-font-size: 1.4rem;
-  --navbar-font-family: font-family: 'Inter';
-}
+
 /* Navbar style and positioning */
 .Nav {
   position: relative;
   height: 85px;
   display: grid;
-  grid-template-columns: 30% 1fr;
+  grid-template-columns: 150px 1fr;
   align-items: center;
+  justify-content: center;
 
   background: var(--primary);
   font-size: 20px;
@@ -26,10 +20,15 @@
   margin-left: 0.5em;
   
 }
+.Logo:hover {
+  transform: scaleX(1.1);
+}
 
 /* Nav menu container */
 .Nav-side-menu {
-  display: flex;
+  display: grid;
+  justify-content: center;
+  grid-auto-flow: column;
 }
 
 /* nav links style and position */
@@ -80,7 +79,7 @@ each Nav link has its own animation
   right: 0;
 }
 .home:hover {
-  color: var(--secondary);
+  color: var(--teritary);
 }
 .home:hover::before,
 .home:hover::after {
@@ -88,13 +87,13 @@ each Nav link has its own animation
   height: 100%;
 }
 .home:hover::before {
-  border-top-color: var(--secondary);
-  border-right-color: var(--secondary);
+  border-top-color: var(--teritary);
+  border-right-color: var(--teritary);
   transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
 }
 .home:hover::after {
-  border-bottom-color: var(--secondary);
-  border-left-color: var(--secondary);
+  border-bottom-color: var(--teritary);
+  border-left-color: var(--teritary);
   transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s,
     height 0.25s ease-out 0.75s;
 }
@@ -120,7 +119,7 @@ each Nav link has its own animation
   right: 0;
 }
 .rentals:hover {
-  color: var(--secondary);
+  color: var(--teritary);
 }
 .rentals:hover::before,
 .rentals:hover::after {
@@ -128,13 +127,13 @@ each Nav link has its own animation
   height: 100%;
 }
 .rentals:hover::before {
-  border-top-color: var(--secondary);
-  border-right-color: var(--secondary);
+  border-top-color: var(--teritary);
+  border-right-color: var(--teritary);
   transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
 }
 .rentals:hover::after {
-  border-bottom-color: var(--secondary);
-  border-left-color: var(--secondary);
+  border-bottom-color: var(--teritary);
+  border-left-color: var(--teritary);
   transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s,
     height 0.25s ease-out 0.75s;
 }
@@ -160,7 +159,7 @@ each Nav link has its own animation
  right: 0;
 }
 .childcare:hover {
- color: var(--secondary);
+ color: var(--teritary);
 }
 .childcare:hover::before,
 .childcare:hover::after {
@@ -168,13 +167,13 @@ each Nav link has its own animation
  height: 100%;
 }
 .childcare:hover::before {
- border-top-color: var(--secondary);
- border-right-color: var(--secondary);
+ border-top-color: var(--teritary);
+ border-right-color: var(--teritary);
  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
 }
 .childcare:hover::after {
- border-bottom-color: var(--secondary);
- border-left-color: var(--secondary);
+ border-bottom-color: var(--teritary);
+ border-left-color: var(--teritary);
  transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s,
    height 0.25s ease-out 0.75s;
 }
@@ -203,7 +202,7 @@ each Nav link has its own animation
 }
 .aroundTown:hover {
   background-color: var(--primary) !important;
-  color: var(--secondary);
+  color: var(--teritary);
 }
 .aroundTown:hover::before,
 .aroundTown:hover::after {
@@ -212,13 +211,13 @@ each Nav link has its own animation
   color: var(--primary) !important;
 }
 .aroundTown:hover::before {
-  border-top-color: var(--secondary);
-  border-right-color: var(--secondary);
+  border-top-color: var(--teritary);
+  border-right-color: var(--teritary);
   transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
 }
 .aroundTown:hover::after {
-  border-bottom-color: var(--secondary);
-  border-left-color: var(--secondary);
+  border-bottom-color: var(--teritary);
+  border-left-color: var(--teritary);
   transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s,
     height 0.25s ease-out 0.75s;
 }
@@ -256,7 +255,7 @@ each Nav link has its own animation
   right: 0;
 }
 .about:hover {
-  color: var(--secondary);
+  color: var(--teritary);
 }
 .about:hover::before,
 .about:hover::after {
@@ -264,13 +263,13 @@ each Nav link has its own animation
   height: 100%;
 }
 .about:hover::before {
-  border-top-color: var(--secondary);
-  border-right-color: var(--secondary);
+  border-top-color: var(--teritary);
+  border-right-color: var(--teritary);
   transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
 }
 .about:hover::after {
-  border-bottom-color: var(--secondary);
-  border-left-color: var(--secondary);
+  border-bottom-color: var(--teritary);
+  border-left-color: var(--teritary);
   transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s,
     height 0.25s ease-out 0.75s;
 }
@@ -279,6 +278,7 @@ each Nav link has its own animation
 /* Nav items containers */
 .Nav-items {
   display: flex;
+  
 }
 
 .fa-bars {
@@ -288,7 +288,7 @@ each Nav link has its own animation
 /* resident info button */
 .Nav-links-button {
   background-color: var(--secondary);
-  color: var(--primary);
+  color: var(--fourth);
   padding: 0.2em;
   border-radius: 7px;
   height: max-content !important;
@@ -305,9 +305,9 @@ each Nav link has its own animation
 }
 
 .Nav-links-button:hover {
-  filter: drop-shadow(0 0 2em var(--secondary));
+  filter: drop-shadow(0 0 2em var(--teritary));
   color: var(--secondary);
-  background-color: var(--primary);
+  background-color: var(--fourth);
   transition: 0.7s ease-in-out;
 }
 

@@ -4,7 +4,7 @@
 	padding-bottom: 25px;
 	text-transform: uppercase;
 	font-weight: 700;
-    font-size: 17px;
+    font-size: clamp(1rem, 2vw, 1.5rem); ;
 	font-weight: 700;
 	letter-spacing: 0.02em;
 	line-height: 1.8em;
@@ -35,40 +35,42 @@
 	background-color: var(--fourth);
 }
 
-.single-service {
-    margin-top: 40px;
-	background-color: #24252a;
-	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-    padding: 40px 40px 25px;
+.plans {
+	background-color: var(--secondary);
+	margin: auto;
+	width: 80vw;
+}
+
+.types-of-plans {
+	display: flex;
+	justify-content: space-around;
+}
+
+
+.option-1 {
+    margin-top: 1em;
 	border-bottom: 2px solid #1d1e23;
     margin-bottom: 25px;
 	color: var(--fourth);
     font-size: 17px;
 	font-weight: 700;
+	font-family: var(--font-2);
 	letter-spacing: 0.02em;
 	line-height: 1.8em;
+	width: max-content;
 }
 
-.font-1 {
-    font-family: 'IBM Plex Sans Arabic';
-  }
-  
-  .font-2 {
-    font-family: 'Inter';
-  }
-  
-  .font-3 {
-    font-family: 'Lilita One';
-  }
-  
-  .font-4 {
-    font-family: 'Mogra';
-  }
-  
-  .font-5 {
-    font-family: 'Roboto Condensed';
-  }
-  
-  .font-6 {
-    font-family: 'Ubuntu Condensed';
-  }
+.age-1-enrollments {
+	display: flex;
+	flex-direction: column;
+	gap: 4em;
+	list-style: none;
+}
+
+.age-1-cost {
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+	list-style: none;
+
+}

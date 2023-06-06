@@ -1,9 +1,4 @@
-:root {
-  --primary: #1f3b62;
-  --secondary: #C3906E;
-  --teritary: #E5E7DD;
-  --fourth: #EAC25E;
-}
+
 .container-style {
   height: 100vh;
   text-align: center;

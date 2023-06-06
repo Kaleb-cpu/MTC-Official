@@ -1,8 +1,14 @@
 :root {
     --primary: #1f3b62;
-    --secondary: #C3906E;
+    --secondary: #24252a;
     --teritary: #E5E7DD;
     --fourth: #EAC25E;
+    --font-1: IBM Plex Sans Arabic;
+  --font-2: Inter;
+  --font-3: Lilita One;
+  --font-4: Mogra;
+  --font-5: Roboto Condensed;
+  --font-6: Ubuntu Condensed;
   }
 
   body {
@@ -20,7 +26,7 @@
       padding-bottom: 1em;
   }
 
-/* underfoled */
+/* underfold */
 
 .under-fold{
     display: grid;
