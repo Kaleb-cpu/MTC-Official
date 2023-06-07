@@ -35,29 +35,70 @@
 	background-color: var(--fourth);
 }
 
-.plans {
-	background-color: var(--secondary);
-	margin: auto;
-	width: 80vw;
+/* breakpoint for bigger screens */
+@media only screen and (min-width: 768px) {
+	
+	.plans {
+		background-color: var(--secondary);
+		margin: auto;
+		width: 80vw;
+	}
+	.types-of-plans {
+		display: flex;
+		justify-content: space-around;
+	}
+	.option-1 {
+		margin-top: 1em;
+		margin-bottom: 25px;
+		color: var(--fourth);
+		font-size: 17px;
+		font-weight: 700;
+		font-family: var(--font-2);
+		letter-spacing: 0.02em;
+		line-height: 1.8em;
+		width: max-content;
+	}
+	.age-1-cost {
+		display: flex;
+		flex-direction: column;
+		gap: 2em;
+		list-style: none;
+	
+	}
+
 }
 
-.types-of-plans {
-	display: flex;
-	justify-content: space-around;
-}
-
-
-.option-1 {
-    margin-top: 1em;
-	border-bottom: 2px solid #1d1e23;
-    margin-bottom: 25px;
-	color: var(--fourth);
-    font-size: 17px;
-	font-weight: 700;
-	font-family: var(--font-2);
-	letter-spacing: 0.02em;
-	line-height: 1.8em;
-	width: max-content;
+@media only screen and (max-width: 768px) {
+	
+	.plans {
+		background-color: var(--secondary);
+		margin: auto;
+		width: 97vw;
+	}
+	
+	.types-of-plans {
+		display: flex;
+		justify-content: space-evenly;
+	}
+	.option-1 {
+		margin-top: 1em;
+		margin-bottom: 25px;
+		color: var(--fourth);
+		font-size: 1.1rem;
+		font-weight: 700;
+		font-family: var(--font-2);
+		letter-spacing: 0.02em;
+		line-height: 1.8em;
+		width: max-content;
+	}
+	.age-1-cost {
+		display: flex;
+		flex-direction: column;
+		list-style: none;
+		gap: 1em;
+		
+	}
+	
 }
 
 .age-1-enrollments {
@@ -67,10 +108,60 @@
 	list-style: none;
 }
 
-.age-1-cost {
-	display: flex;
-	flex-direction: column;
-	gap: 2em;
-	list-style: none;
 
+
+
+
+
+
+
+
+button {
+	position: relative;
+	
 }
+
+button.active {
+	color: var(--teritary);
+	background-color: var(--secondary);
+	
+}
+
+.dropDown > p:hover {
+	color: var(--secondary);
+	background-color: var(--teritary);
+}
+
+.dropDown > p {
+	padding: 0.375rem 0.88rem;
+	border-bottom: 1px solid rgb(235, 235, 235);
+	min-width: 140px;
+}
+
+.dropDown {
+	margin: 2em 1em;
+	position: absolute;
+	top: 38px;
+	left: 2px;
+	border: 1px solid var(--teritary);
+	background: var(--secondary);
+	color: var(--fourth);
+	text-align: left;
+	border-radius: 0.25rem;
+	width: max-content;
+	
+  }
+
+  .ageGroupSelection {
+	margin: 1em 2em;
+  }
+
+  .backgroupInfromation {
+	background-color: var(--secondary);
+	color: var(--teritary);
+	width: fit-content;
+	margin: auto;
+	border-radius: 5px;
+	padding: 0.5em;
+	margin-bottom: 0.5em;
+  }

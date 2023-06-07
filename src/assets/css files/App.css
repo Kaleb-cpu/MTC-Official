@@ -117,3 +117,9 @@
 .bg-Primary {
   background-color: var(--secondary);
 }
+
+/* specific to ice surface */
+
+.borderTop {
+  border-top: solid 2px var(--fourth);
+}
