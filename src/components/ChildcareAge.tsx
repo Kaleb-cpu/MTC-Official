@@ -3,8 +3,8 @@
 import { useEffect, useState } from 'react';
 
 type DropDownProps = {
-    residentPricing: string[];
-    nonResidentPricing: string[];
+    // residentPricing: string[];
+    // nonResidentPricing: string[];
     ageGroups: string[];
     showDropDown: boolean;
     toggleDropDown: Function;
@@ -13,7 +13,7 @@ type DropDownProps = {
 
   const DropDown = ({
     ageGroups,
-    residentPricing,
+    // residentPricing,
     ageGroupSelection,
   }: DropDownProps): JSX.Element => {
     const [showDropDown, setShowDropDown] = useState<boolean>(false);

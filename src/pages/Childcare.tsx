@@ -7,22 +7,22 @@ import DropDown from '../components/ChildcareAge';
 const ChildCare = (): JSX.Element => {
 	const [showDropDown, setShowDropDown] = useState<boolean>(false);
 	const [selectageGroup, setselectageGroup] = useState<string>("");
-	const [pricing, selectedPricing] = useState<string>("please select age group to see pricing")
+	// const [pricing, selectedPricing] = useState<string>("please select age group to see pricing")
 
 	const ageGroups = () => {
 	  return ["19 months - 2.4 years", "2.5 years - 5 years"];
 	};
 
-	const residentPricing = () => {
-		return 
-		["$1125","$675", "$450"];
-	};
+	// const residentPricing = () => {
+	// 	return 
+	// 	["$1125","$675", "$450"];
+	// };
 
-	const NonresidentPricing = () => {
-		return 
-		["Nonresident","$1175","$705","$470"]
+	// const NonresidentPricing = () => {
+	// 	return 
+	// 	["Nonresident","$1175","$705","$470"]
 	
-	};
+	// };
 
 
 	const toggleDropDown = () => {
