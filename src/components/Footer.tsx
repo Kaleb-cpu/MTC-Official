@@ -7,7 +7,7 @@ import { BsFacebook } from "react-icons/bs";
 
 function Footer() {
     return (
-        <>
+        <div className="">
          <footer className="footer-59391">
         <div className="border-bottom pb-5 mb-4">
           <div className="container">
@@ -59,7 +59,7 @@ function Footer() {
 
     </footer>
         
-        </>
+        </div>
     )
 }
 export default Footer

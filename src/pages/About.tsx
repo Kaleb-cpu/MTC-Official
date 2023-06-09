@@ -1,6 +1,19 @@
+import foip from '../../public/media/documents/MTC_Privacy_Policy.pdf'
+
 export default function About() {
   return (
-    <>
+    <div className='aboutContainer'>
+      <div className="aboutScrollbar">
+
+        <div className="contentList">
+      <h2>Content</h2>
+      <h1 className="about"><a href="#about"><i className="fa fa-circle" aria-hidden="true"></i><span className="md:text-xl text-base pl-3 ">About MTC</span></a></h1>
+      <h1 className="amenities"><a href="#amenities"><i className="fa fa-circle" aria-hidden="true"></i><span className="md:text-xl text-base pl-3 ">Amenities</span></a></h1>
+      <h1 className="MVV"><a href="#MVV"><i className="fa fa-circle" aria-hidden="true"></i><span className="md:text-xl text-base pl-3 ">MVV</span></a></h1>
+      <h1 className="foip"><a href="#foip"><i className="fa fa-circle" aria-hidden="true"></i><span className="md:text-xl text-base pl-3 ">FOIP</span></a></h1>
+      </div>
+
+      </div>
       {/* about section page */}
       <section className="About" id="about">
         <h3 className="title teritary font-5 md:text-4xl text-2xl text-center ml-5 mb-5 mt-11">
@@ -21,7 +34,7 @@ export default function About() {
 
       {/* amenties */}
 
-      <section>
+      <section className="Amenties" id="amenities">
         <h3 className="title teritary font-5 md:text-4xl text-2xl text-center ml-5 mb-5 mt-11">
           <span className="span-title">Amenities: </span>
         </h3>
@@ -42,33 +55,33 @@ export default function About() {
 
       {/* Mission Value and Vision */}
 
-      <section>
+      <section className="mission-value-vission" id="MVV">
       <h3 className="title teritary font-5 md:text-4xl text-2xl text-center ml-5 mb-5 mt-11">
           <span className="span-title">Mission Vision Values </span>
         </h3>
 
-        <div className="md:flex md:justify-evenly">
+        <div className="MVV">
 
           {/* Mission statement */}
-          <div className="md:w-2/5 ">
-        <h3 className="teritary font-2 md:text-3xl text-2xl text-center md:ml-0 ml-5 mb-5 mt-11"> Mission Statement 
+          <div className="mission">
+        <h3 className="teritary font-2 md:text-3xl text-2xl text-center mb-5 mt-11"> Mission Statement 
         </h3>
-        <p className="teritary font-2 md:text-xl text-left text-lg m-auto md:m-0 mb-5">
+        <p className="teritary font-2 md:text-xl text-left text-lg mb-5">
         MTC is a steward of the community, MTC enhances and maintains physical amenities while actively promoting collaborative participation amongst residents in an inclusive environment.
         </p>
 </div>
         {/* Vision statement */}
-<div className="md:w-1/5 ">
-        <h3 className="teritary font-2 md:text-3xl text-2xl text-center ml-5 mb-5 mt-11"> Vision Statement 
+<div className="vision">
+        <h3 className="teritary font-2 md:text-3xl text-2xl text-center mb-5 mt-11"> Vision Statement 
         </h3>
-        <p className="teritary font-2 md:text-xl text-left text-lg m-auto md:m-0 mb-5">
+        <p className="teritary font-2 md:text-xl text-left text-lg mb-5">
         To be Calgary's finest community where people live, work and play.
         </p>
 </div>
-<div className="md:w-2/5">
-        <h3 className="teritary font-2 md:text-3xl text-2xl text-center md:ml-0 ml-5 mb-5 mt-11"> Values
+<div className="values">
+        <h3 className="teritary font-2 md:text-3xl text-2xl text-center mb-5 mt-11"> Values
         </h3>
-        <div className="teritary font-2 md:text-xl text-left text-lg m-auto md:m-0 mb-5">
+        <div className="teritary font-2 md:text-xl text-left text-lg mb-5">
         <li>Fiscally responsible stewardship.</li>
         <li>Promote a positive and inclusive experience.</li>
         <li>Progressively maintain a safe, healthy and sustainable environment.</li>
@@ -76,6 +89,15 @@ export default function About() {
         </div>
         </div>
       </section>
-    </>
+
+      <section className="FOIP" id="foip">
+      <h3 className="title teritary font-5 md:text-4xl text-2xl text-center ml-5 mb-5 mt-11">
+          <span className="span-title">Privacy/FOIP </span>
+        </h3>
+
+        <h3 className="teritary font-2 md:text-3xl text-2xl text-center mb-5 mt-11"> Click <a href={foip}> <span className="hover:text-white text-blue-500">here</span> </a> for the officially written FOIP documentation
+        </h3>
+      </section>
+    </div>
   );
 }

@@ -11,9 +11,11 @@ function Navbar() {
   const changeClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
+  // scroll 
+
 
   return (
-    <>
+    <div>
       <section>
         <nav className="Nav">
           <Link to="/" className="Logo">
@@ -94,7 +96,7 @@ function Navbar() {
           </ul>
         </nav>
       </section>
-    </>
+    </div>
   );
 }
 

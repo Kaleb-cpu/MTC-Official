@@ -19,6 +19,7 @@
   background-color: #1f3b62;
 }
 
+
 #root {
   /* max-width: 1280px; */
   margin: 0 auto;
@@ -53,6 +54,54 @@
     animation: logo-spin infinite 20s linear;
   }
 }
+
+/* title underneath border */
+
+.title {
+  position: relative;
+margin-bottom: 40px;
+padding-bottom: 25px;
+text-transform: uppercase;
+font-weight: 700;
+  font-size: clamp(1rem, 2vw, 1.5rem); ;
+font-weight: 700;
+letter-spacing: 0.02em;
+line-height: 1.8em;
+}
+
+.title:before {
+  content: "";
+position: absolute;
+bottom: 0;
+left: 50%;
+transform: translateX(-50%);
+width: 140px;
+height: 1px;
+background-color: var(--fourth);
+}
+
+.span-title {
+  color: var(--fourth);
+}
+
+.title:after { 
+  content: "";
+position: absolute;
+bottom: -1px;
+left: 50%;
+transform: translateX(-50%);
+width: 45px;
+height: 3px;
+background-color: var(--fourth);
+}
+
+/* rentals */
+
+.rentalsContainer {
+  min-height: 100vh;
+}
+
+
 
 .card {
   padding: 2em;
@@ -122,4 +171,93 @@
 
 .borderTop {
   border-top: solid 2px var(--fourth);
+}
+
+/* about page */
+
+.aboutContainer {
+  min-height: 100vh;
+}
+
+@media only screen and (min-width: 768px) {
+    .MVV {
+      display: flex;
+      justify-content: space-evenly;
+      
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+
+    .About {
+      margin: 1em;
+    }
+
+    .Amenties {
+      margin: 1em;
+    }
+
+   .mission {
+    margin: 2em;
+   }
+
+   .vision {
+    margin: 2em;
+   }
+
+   .values {
+    margin: 2em;
+   }
+  }
+
+
+.mission {
+  max-width: 45ch;
+}
+
+.vision {
+  max-width: 40ch;
+}
+
+.values {
+  max-width: 50ch;
+}
+
+.aboutScrollbar {
+  color: var(--fourth);
+ 
+  
+  margin-left: 1vw;
+  position: sticky;
+  border-radius: 15px;
+  top: 0;
+  width: 10vw;
+  
+  padding: 2em 0.4em;
+}
+
+.aboutScrollbar h2 {
+  font-size: clamp(0.5rem, 2vw, 1.7rem);
+  padding-bottom: 0.4em;
+}
+
+.contentList {
+  background-color: rgb(36, 37, 42, .2);
+  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-left: 0.5em;
+  margin-top: 1.3em;
+  padding: 1.2em 0.3em;
+  border-radius: 5px;
+  gap: 1.9em;
+  position: absolute;
+  top: 100%;
+}
+
+/* Political contacts */
+
+.pcContainer {
+  min-height: 100vh;
 }
