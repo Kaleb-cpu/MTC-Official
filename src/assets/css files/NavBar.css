@@ -276,10 +276,7 @@ each Nav link has its own animation
 
 
 /* Nav items containers */
-.Nav-items {
-  display: flex;
-  
-}
+
 
 .fa-bars {
   color: #fff;
@@ -302,6 +299,11 @@ each Nav link has its own animation
     margin-left: 20rem;
     margin-right: 1rem;
   } */
+
+  .Nav-items {
+    display: flex;
+    
+  }
 }
 
 .Nav-links-button:hover {
@@ -315,12 +317,15 @@ each Nav link has its own animation
   display: none;
 }
 
+
+
 /* break point */
 
 @media screen and (max-width: 1000px) {
   .Nav-side-menu {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     width: 250px;
     height: calc(100vh - 85px);
     position: absolute;
@@ -328,7 +333,6 @@ each Nav link has its own animation
     top: 85px;
     /* border: 2px solid var(--primary); */
     left: -100%;
-    opacity: 1;
     transition: all 0.5s ease;
     justify-content: flex-start;
   }
@@ -389,5 +393,7 @@ each Nav link has its own animation
   .Nav-items {
     height: auto;
   }
+
+  
 }
 

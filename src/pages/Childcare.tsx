@@ -46,7 +46,9 @@ const ChildCare = (): JSX.Element => {
 
   return (
     <div>
-      <h1 className="teritary md:display-5 text-3xl font-1 mb-9 mt-10">Welcome to McKenzie Towne Hall’s Childcare Program! </h1>
+	  <h3 className="title teritary font-5 md:text-4xl text-2xl text-center ml-5 mb-5 mt-11">
+          <span className="span-title">Welcome to McKenzie Towne Hall’s </span>Childcare Program!
+        </h3>
       <p className='teritary font-2 md:text-xl text-lg text-left md:w-2/5 ml-5 mb-5'>The purpose of our program is to help families living in the community of McKenzie Towne and in the neighborhood communities by offering quality child care for children between 19 months and 5 years old. </p>
       <p className='teritary font-2 md:text-xl text-lg text-left md:w-2/5 ml-5 mb-5'>We are a licensed childcare, approved by the Alberta Government. Our dedicated staff have Early Childhood Education credentials and valid First Aid certificates. The program is held within the McKenzie Towne Hall.</p>
       <p className='teritary font-2 md:text-xl text-lg text-left md:w-2/5 italic ml-5 mb-5'>MTC Childcare hours are from 7:00 am to 6:00 pm, Monday to Friday.</p>

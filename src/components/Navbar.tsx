@@ -74,22 +74,22 @@ function Navbar() {
 
             <li className="Nav-items">
               <Link
+                to="/ResidentInfo"
+                className="Nav-links about"
+                onClick={closeMobileMenu}
+              >
+                {" "}
+                Resident Info{" "}
+              </Link>
+            </li>
+            <li className="Nav-items">
+              <Link
                 to="/About"
                 className="Nav-links about"
                 onClick={closeMobileMenu}
               >
                 {" "}
                 About{" "}
-              </Link>
-            </li>
-            <li className="Nav-items">
-              <Link
-                to="/ResidentInfo"
-                className="Nav-links-button"
-                onClick={closeMobileMenu}
-              >
-                {" "}
-                Resident info{" "}
               </Link>
             </li>
 

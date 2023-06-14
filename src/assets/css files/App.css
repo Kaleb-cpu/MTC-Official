@@ -179,13 +179,38 @@ background-color: var(--fourth);
   min-height: 100vh;
 }
 
-@media only screen and (min-width: 768px) {
+.contact-us {
+  z-index: 100;
+  position: relative;
+}
+
+
+@media only screen and (min-width: 900px) {
     .MVV {
       display: flex;
       justify-content: space-evenly;
-      
+    }
+    .aboutScrollbar {
+      width: 11vw;
+    }
+    .contentList i {
+      font-size: 1.1em;
+      margin-left: 0.5em;
+    }
+    .contentList {
+      display: flex;
+      flex-direction: column;
+      gap: 1.9em;
+      position: absolute;
+    }
+
+    .formContainer {
+      width: 25vw;
+      margin-left: 13em;
     }
   }
+
+
 
   @media only screen and (max-width: 768px) {
 
@@ -208,6 +233,34 @@ background-color: var(--fourth);
    .values {
     margin: 2em;
    }
+  
+   .contentList i {
+    font-size: 0.6em;
+  }
+
+  .FormMap {
+    margin: auto;
+  }
+  .contentList {
+    /* background-color: rgb(36, 37, 42, .2); */
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    
+    margin-top: 0.5em;
+    border-radius: 5px;
+    gap: 1.9em;
+    background-color: var(--secondary);
+    padding: 0.7em;
+    /* width: fit-content; */
+  }
+  
+  .formContainer {
+    width: 80%;
+    margin-left: 0.5em;
+  }
+
   }
 
 
@@ -225,39 +278,59 @@ background-color: var(--fourth);
 
 .aboutScrollbar {
   color: var(--fourth);
- 
-  
   margin-left: 1vw;
   position: sticky;
   border-radius: 15px;
   top: 0;
-  width: 10vw;
-  
-  padding: 2em 0.4em;
+
 }
 
 .aboutScrollbar h2 {
-  font-size: clamp(0.5rem, 2vw, 1.7rem);
-  padding-bottom: 0.4em;
+  font-size: clamp(1.3rem, 2vw, 1.7rem);
 }
 
-.contentList {
-  background-color: rgb(36, 37, 42, .2);
-  display: block;
+
+
+.FormMap {
   display: flex;
-  flex-direction: column;
-  align-items: start;
-  margin-left: 0.5em;
-  margin-top: 1.3em;
-  padding: 1.2em 0.3em;
-  border-radius: 5px;
-  gap: 1.9em;
-  position: absolute;
-  top: 100%;
+  justify-content: end;
+  padding-right: 1em;
+  padding-top: 3em;
 }
 
 /* Political contacts */
 
 .pcContainer {
   min-height: 100vh;
+}
+
+/* resident */
+
+.residentContainer {
+  min-height: 100vh;
+}
+
+.boxShadow {
+  box-shadow: 1px 2px 9px var(--fourth);
+  margin: 4em;
+  padding: 0.4em;
+  width: max-content;
+  color: var(--fourth);
+  margin: auto;
+  font-size: clamp(1.7rem, 2vw, 2.7rem);
+  border-radius: 7px;
+}
+
+.boxShadow:hover {
+  filter: drop-shadow(0 0 2em var(--teritary));
+  cursor: pointer;
+  color: var(--teritary);
+}
+
+/* form */
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  
 }

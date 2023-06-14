@@ -92,6 +92,8 @@
         height: 40px;
         border-radius: 50%;
         display: inline-block;
+        
+
         margin: 0;
         padding: 0;
         background-color: var(--primary);
@@ -99,6 +101,7 @@
         .footer-59391 .social li a > span {
           position: absolute;
           top: 50%;
+          
           left: 50%;
           -webkit-transform: translate(-50%, -50%);
           -ms-transform: translate(-50%, -50%);

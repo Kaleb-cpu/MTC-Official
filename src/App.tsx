@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import ChildCare from "./pages/Childcare";
 import Rentals from "./pages/Rentals";
+import ResidentInfo from "./pages/ResidentInfo";
 import PageNotFound from "./pages/PageNotFound";
 
 
@@ -31,6 +32,7 @@ export default function App() {
         <Route path="Emergency" element={<Emergency />} />
         <Route path="Political Contacts" element={<PoliticalContacts />} />
         <Route path="Crime Stats" element={<CrimeStats />} />
+        <Route path="ResidentInfo" element={<ResidentInfo />} />
 
         <Route path="About" element={<About />} />
         <Route path="*" element={<PageNotFound />} />

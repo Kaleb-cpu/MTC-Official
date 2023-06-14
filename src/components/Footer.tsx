@@ -1,8 +1,10 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import { HashLink } from 'react-router-hash-link'
 import "../assets/css files/footer.css"
 import { BsLinkedin } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import { BsFacebook } from "react-icons/bs";
+import foip from "../../public/media/documents/MTC_Privacy_Policy.pdf"
 
 
 function Footer() {
@@ -15,7 +17,7 @@ function Footer() {
               <div className="col-lg-3">
                 <form action="#" className="subscribe mb-4 mb-lg-0">
                   <div className="form-group">
-                  <input type="email" className="form-control" placeholder="Enter your email" />
+                  {/* <input type="email" className="form-control" placeholder="Enter your email" /> */}
                   <button><span className="icon-keyboard_backspace"></span></button>
                   </div>
                 </form>
@@ -29,9 +31,9 @@ function Footer() {
               </div>
               <div className="col-lg-3">
                 <ul className="list-unstyled nav-links social nav-right text-lg-right">
-                  <li><a href="#"><span><BsLinkedin/></span></a></li> 
-                  <li><a href="#"><span><BsInstagram/></span></a></li>
-                  <li><a href="#"><span><BsFacebook/></span></a></li>
+                  <li className="pr-2"><a href="#"><span><BsLinkedin/></span></a></li> 
+                  <li className="pr-2"><a href="#"><span><BsInstagram/></span></a></li>
+                  <li className="pr-2"><a href="#"><span><BsFacebook/></span></a></li>
                 </ul>
               </div>
             </div>
@@ -45,9 +47,9 @@ function Footer() {
             </div>
             <div className="col-lg-4 order-1 order-lg-1 mb-3 mb-lg-0">
               <ul className="list-unstyled nav-links m-0 nav-left">
-                <li><a href="#">FOIP</a></li>
+                <li><a href={foip}>FOIP</a></li>
                 <li><a href="/About">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li> <HashLink to="/About#contact-us">Contact</HashLink> </li>
               </ul>
             </div>
             
