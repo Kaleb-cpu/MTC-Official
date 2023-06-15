@@ -4,6 +4,15 @@ import "../assets/css files/App.css";
 import { Link } from "react-router-dom";
 import Dropdown from "react-bootstrap/Dropdown";
 
+// Around towne dropdown pages
+
+import IceSurface from "../pages/Ice Surface";
+import PondsPathways from "../pages/Ponds Pathways";
+import Emergency from "../pages/Emergency";
+import PoliticalContacts from "../pages/Political Contacts";
+import CrimeStats from "../pages/Crime Stats";
+
+
 // import "bootstrap/dist/css/bootstrap.min.css";
 
 function Navbar() {
@@ -63,15 +72,15 @@ function Navbar() {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                  <Dropdown.Item href="/Ice Surface">Ice Surface</Dropdown.Item>
-                  <Dropdown.Item href="/Political Contacts">
+                  <Dropdown.Item link to={ IceSurface }>Ice Surface</Dropdown.Item>
+                  <Dropdown.Item link to={ PoliticalContacts }>
                     Political Contacts
                   </Dropdown.Item>
-                  <Dropdown.Item href="/Ponds Pathways">
+                  <Dropdown.Item link to={ PondsPathways }>
                     Ponds & Pathways
                   </Dropdown.Item>
-                  <Dropdown.Item href="/Emergency">Emergency</Dropdown.Item>
-                  <Dropdown.Item href="/Crime Stats">Crime Stats</Dropdown.Item>
+                  <Dropdown.Item link to={ Emergency }>Emergency</Dropdown.Item>
+                  <Dropdown.Item link to={ CrimeStats }>Crime Stats</Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
             </li>
