@@ -2,7 +2,7 @@ import { useState } from "react";
 import "../assets/css files/NavBar.css";
 import "../assets/css files/App.css";
 import { Link } from "react-router-dom";
-import Dropdown from 'react-bootstrap/Dropdown';
+import Dropdown from "react-bootstrap/Dropdown";
 
 // import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -11,8 +11,7 @@ function Navbar() {
   const changeClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
-  // scroll 
-
+  // scroll
 
   return (
     <div>
@@ -54,22 +53,27 @@ function Navbar() {
                 Child Care{" "}
               </Link>
             </li>
-            <li
-              className="Nav-items"
-            >
-                <Dropdown>
-      <Dropdown.Toggle className="Nav-links aroundTown" id="dropdown-basic">
-        <div> Around Towne </div>
-      </Dropdown.Toggle>
+            <li className="Nav-items">
+              <Dropdown>
+                <Dropdown.Toggle
+                  className="Nav-links aroundTown"
+                  id="dropdown-basic"
+                >
+                  <div> Around Towne </div>
+                </Dropdown.Toggle>
 
-      <Dropdown.Menu>
-        <Dropdown.Item href="/Ice Surface">Ice Surface</Dropdown.Item>
-        <Dropdown.Item href="/Political Contacts">Political Contacts</Dropdown.Item>
-        <Dropdown.Item href="/Ponds Pathways">Ponds & Pathways</Dropdown.Item>
-        <Dropdown.Item href="/Emergency">Emergency</Dropdown.Item>
-        <Dropdown.Item href="/Crime Stats">Crime Stats</Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown>
+                <Dropdown.Menu>
+                  <Dropdown.Item href="/Ice Surface">Ice Surface</Dropdown.Item>
+                  <Dropdown.Item href="/Political Contacts">
+                    Political Contacts
+                  </Dropdown.Item>
+                  <Dropdown.Item href="/Ponds Pathways">
+                    Ponds & Pathways
+                  </Dropdown.Item>
+                  <Dropdown.Item href="/Emergency">Emergency</Dropdown.Item>
+                  <Dropdown.Item href="/Crime Stats">Crime Stats</Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
             </li>
 
             <li className="Nav-items">
@@ -92,7 +96,6 @@ function Navbar() {
                 About{" "}
               </Link>
             </li>
-
           </ul>
         </nav>
       </section>

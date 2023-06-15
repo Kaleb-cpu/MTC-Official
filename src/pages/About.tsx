@@ -9,31 +9,46 @@ export default function About() {
           <h2 className="hidden md:block">Content</h2>
           <h1 className="about">
             <a href="#about">
-              <i className="fa fa-circle hidden md:block" aria-hidden="true"></i>
+              <i
+                className="fa fa-circle hidden md:block"
+                aria-hidden="true"
+              ></i>
               <span className="md:text-xl text-base pl-3 ">About MTC</span>
             </a>
           </h1>
           <h1 className="amenities">
             <a href="#amenities">
-              <i className="fa fa-circle hidden md:block" aria-hidden="true"></i>
+              <i
+                className="fa fa-circle hidden md:block"
+                aria-hidden="true"
+              ></i>
               <span className="md:text-xl text-base pl-3 ">Amenities</span>
             </a>
           </h1>
           <h1 className="MVV">
             <a href="#MVV">
-              <i className="fa fa-circle hidden md:block" aria-hidden="true"></i>
+              <i
+                className="fa fa-circle hidden md:block"
+                aria-hidden="true"
+              ></i>
               <span className="md:text-xl text-base pl-3 ">MVV</span>
             </a>
           </h1>
           <h1 className="foip">
             <a href="#foip">
-              <i className="fa fa-circle hidden md:block" aria-hidden="true"></i>
+              <i
+                className="fa fa-circle hidden md:block"
+                aria-hidden="true"
+              ></i>
               <span className="md:text-xl text-base pl-3 ">FOIP</span>
             </a>
           </h1>
           <h1 className="contact-us">
             <a href="#contact-us">
-              <i className="fa fa-circle hidden md:block" aria-hidden="true"></i>
+              <i
+                className="fa fa-circle hidden md:block"
+                aria-hidden="true"
+              ></i>
               <span className="md:text-xl text-base pl-3 ">Contact US</span>
             </a>
           </h1>
@@ -153,10 +168,10 @@ export default function About() {
             <p>Calgary, AB T2Z 4X5</p>
             <p>Phone: (403) 781-6612</p>
             <p>Fax: (403) 930-1551</p>
-          
 
-          
-            <h3 className="font-bold mt-10 mb-3 fourth">Customer Service Hours:</h3>
+            <h3 className="font-bold mt-10 mb-3 fourth">
+              Customer Service Hours:
+            </h3>
             <li>Monday to Thursday - 9:00 AM to 9:00 PM</li>
             <li>Friday - 9:00 AM to 8:00 PM</li>
             <li>Saturday - 4:00 PM to 9:00 PM (or as disclosed)</li>
@@ -166,14 +181,27 @@ export default function About() {
             <h3 className="font-bold mt-10 mb-3 fourth">Admin Staff Hours:</h3>
             <p>Monday to Friday - 8:00 AM to 4:00 PM</p>
           </div>
-        <div className="FormMap">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20123.208210909914!2d-113.98200864308807!3d50.91629823780583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537177bd9271a861%3A0xebe84e3db73d7cc4!2sMcKenzie%20Towne%2C%20Calgary%2C%20AB!5e0!3m2!1sen!2sca!4v1686606867274!5m2!1sen!2sca" width="600" height="450" style={{ border: "0" }} allowFullScreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-      </div>
+          <div className="FormMap">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20123.208210909914!2d-113.98200864308807!3d50.91629823780583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537177bd9271a861%3A0xebe84e3db73d7cc4!2sMcKenzie%20Towne%2C%20Calgary%2C%20AB!5e0!3m2!1sen!2sca!4v1686606867274!5m2!1sen!2sca"
+              width="600"
+              height="450"
+              style={{ border: "0" }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
 
         <Form />
 
-        <h3 className="teritary font-2 md:text-xl text-base text-center mb-5 mt-11 italic">McKenzie Towne Community Association (MTCA) is not located at McKenzie Towne Council. If you require more information, email MTCA directly at feedback@mckenzietownecommunityassociation.ca or visit our webpage at www.mckenzietownecommunityassociation.ca</h3>
+        <h3 className="teritary font-2 md:text-xl text-base text-center mb-5 mt-11 italic">
+          McKenzie Towne Community Association (MTCA) is not located at McKenzie
+          Towne Council. If you require more information, email MTCA directly at
+          feedback@mckenzietownecommunityassociation.ca or visit our webpage at
+          www.mckenzietownecommunityassociation.ca
+        </h3>
       </section>
     </div>
   );

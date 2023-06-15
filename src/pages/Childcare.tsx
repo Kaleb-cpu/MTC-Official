@@ -1,7 +1,6 @@
 import React from "react";
 import "../assets/css files/childcare.css";
 
-
 interface Props {
   onSelectageGroup: (ageGroup: string) => void;
   ageLists: List[];
@@ -59,7 +58,10 @@ const ChildCare = ({ onSelectageGroup, ageLists }: Props) => {
               <option className="ageGroupOption" value="19 months - 2.4 years">
                 19 months - 2.4 years
               </option>
-              <option className="ageGroupOption" value="2.5 years - 5 years"> 2.5 years - 5 years</option>
+              <option className="ageGroupOption" value="2.5 years - 5 years">
+                {" "}
+                2.5 years - 5 years
+              </option>
             </select>
           </div>
         </div>
@@ -74,27 +76,25 @@ const ChildCare = ({ onSelectageGroup, ageLists }: Props) => {
           </div>
 
           <div className="Childcare">
-          
             <h3 className="title">Cost</h3>
 
-              {ageLists?.map((ageList) => (
-                <div key={ageList.id} className="childcareCost">
-                  <div>
-                    <li>Resident:{ageList.Fresident}</li>
-                    <li>Non-Resident:{ageList.FnonResident}</li>
-                  </div>
-                  <div>
-                    <li>Resident:{ageList.P3resident}</li>
-                    <li>Non-Resident:{ageList.P3nonResident}</li>
-                  </div>
-
-                  <div>
-                    <li>Resident:{ageList.P2resident}</li>
-                    <li>Non-Resident:{ageList.P2nonResident}</li>
-                  </div>
+            {ageLists?.map((ageList) => (
+              <div key={ageList.id} className="childcareCost">
+                <div>
+                  <li>Resident:{ageList.Fresident}</li>
+                  <li>Non-Resident:{ageList.FnonResident}</li>
                 </div>
-              ))}
+                <div>
+                  <li>Resident:{ageList.P3resident}</li>
+                  <li>Non-Resident:{ageList.P3nonResident}</li>
+                </div>
 
+                <div>
+                  <li>Resident:{ageList.P2resident}</li>
+                  <li>Non-Resident:{ageList.P2nonResident}</li>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
