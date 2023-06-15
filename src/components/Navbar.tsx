@@ -59,7 +59,7 @@ function Navbar() {
             >
                 <Dropdown>
       <Dropdown.Toggle className="Nav-links aroundTown" id="dropdown-basic">
-        <div  > Around Towne </div>
+        <div> Around Towne </div>
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
