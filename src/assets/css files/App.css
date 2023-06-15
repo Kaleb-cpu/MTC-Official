@@ -338,3 +338,13 @@
   flex-direction: column;
   
 }
+
+/* emergency */
+
+.ContactLine {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: var(--secondary);
+  border-radius: 10px;
+  margin: 2em 1.3em;
+}
