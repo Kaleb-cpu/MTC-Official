@@ -22,7 +22,7 @@ export default function App() {
   // state variable that represents the selected variable
   const [selectedAgeGroup, setSelectedAgeGroup] = useState("");
 
-  const [ageLists, setageLists] = useState([
+  const [ageLists] = useState([
     {
       id: 1,
       ageGroup: "19 months - 2.4 years",
@@ -45,7 +45,7 @@ export default function App() {
     },
   ]);
 
-  const [defaultState, setdefaultState] = useState([
+  const [defaultState] = useState([
     { id: 1, ageGroup: "", Fresident: "", FnonResident: "" },
   ]);
 

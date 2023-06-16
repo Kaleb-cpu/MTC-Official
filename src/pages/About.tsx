@@ -182,14 +182,14 @@ export default function About() {
             <p>Monday to Friday - 8:00 AM to 4:00 PM</p>
           </div>
           <div className="FormMap">
-            <iframe
+            <iframe 
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20123.208210909914!2d-113.98200864308807!3d50.91629823780583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537177bd9271a861%3A0xebe84e3db73d7cc4!2sMcKenzie%20Towne%2C%20Calgary%2C%20AB!5e0!3m2!1sen!2sca!4v1686606867274!5m2!1sen!2sca"
               width="600"
               height="450"
               style={{ border: "0" }}
-              allowFullScreen=""
+              allowFullScreen={true}
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
+              // referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
         </div>
