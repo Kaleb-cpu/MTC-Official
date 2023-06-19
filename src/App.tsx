@@ -45,13 +45,14 @@ export default function App() {
     },
   ]);
 
-  const [defaultState] = useState([
-    { id: 1, ageGroup: "", Fresident: "", FnonResident: "" },
-  ]);
+  // const [defaultState] = useState([
+  //   { id: 1, ageGroup: "", Fresident: "", FnonResident: "" },
+  // ]);
 
   const visibleExpenses = selectedAgeGroup
     ? ageLists.filter((e) => e.ageGroup === selectedAgeGroup)
-    : defaultState;
+    : // @ts-nocheck
+      ageLists;
 
   return (
     <Router>
