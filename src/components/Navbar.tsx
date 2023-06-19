@@ -12,7 +12,6 @@ import Emergency from "../pages/Emergency";
 import PoliticalContacts from "../pages/Political Contacts";
 import CrimeStats from "../pages/Crime Stats";
 
-
 // import "bootstrap/dist/css/bootstrap.min.css";
 
 function Navbar() {
@@ -72,15 +71,22 @@ function Navbar() {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                  <Dropdown.Item link to={ IceSurface }>Ice Surface</Dropdown.Item>
-                  <Dropdown.Item link to={ PoliticalContacts }>
-                    Political Contacts
+                  <Dropdown.Item>
+                    <Link to="/Ice Surface"> Ice Surface</Link>{" "}
                   </Dropdown.Item>
-                  <Dropdown.Item link to={ PondsPathways }>
-                    Ponds & Pathways
+
+                  <Dropdown.Item>
+                    <Link to="/Political Contacts"> Political Contacts</Link>
                   </Dropdown.Item>
-                  <Dropdown.Item link to={ Emergency }>Emergency</Dropdown.Item>
-                  <Dropdown.Item link to={ CrimeStats }>Crime Stats</Dropdown.Item>
+                  <Dropdown.Item>
+                    <Link to="/Ponds Pathways"> Ponds & Pathways</Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item>
+                    <Link to="/Emergency"> Emergency</Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item>
+                    <Link to="/Crime Stats"> Crime Stats</Link>
+                  </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
             </li>
