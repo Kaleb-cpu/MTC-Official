@@ -4,15 +4,6 @@ import "../assets/css files/App.css";
 import { Link } from "react-router-dom";
 import Dropdown from "react-bootstrap/Dropdown";
 
-// Around towne dropdown pages
-
-import IceSurface from "../pages/Ice Surface";
-import PondsPathways from "../pages/Ponds Pathways";
-import Emergency from "../pages/Emergency";
-import PoliticalContacts from "../pages/Political Contacts";
-import CrimeStats from "../pages/Crime Stats";
-
-// import "bootstrap/dist/css/bootstrap.min.css";
 
 function Navbar() {
   const [click, setClick] = useState(false);
