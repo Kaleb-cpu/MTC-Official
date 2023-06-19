@@ -1,4 +1,4 @@
-import "../assets/css files/App.css";
+import "../assets/css files/app.css";
 import { useEffect, useState } from "react";
 import "../assets/css files/herosection.css";
 import imageSlide from "../assets/data files/HeroSection_data";
