@@ -8,7 +8,7 @@ import foip from "../../public/media/documents/MTC_Privacy_Policy.pdf";
 
 function Footer() {
   return (
-    <div className="">
+    <div className="mt-10">
       <footer className="footer-59391">
         <div className="border-bottom pb-5 mb-4">
           <div className="container">

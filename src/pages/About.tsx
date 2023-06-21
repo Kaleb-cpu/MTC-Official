@@ -56,7 +56,7 @@ export default function About() {
       </div>
       {/* about section page */}
       <section className="About md:w-3/5 md:m-auto" id="about">
-        <h3 className="title teritary font-5 md:text-4xl text-2xl text-center ml-5 mb-5 mt-11">
+        <h3 className="title teritary font-5 md:text-4xl text-2xl text-center ml-5 mb-5 mt-8">
           <span className="span-title">About </span>MTC
         </h3>
         <p className="teritary font-2 md:text-xl text-lg mb-5">
@@ -75,7 +75,7 @@ export default function About() {
       {/* amenties */}
 
       <section className="Amenties md:w-4/5 md:m-auto" id="amenities">
-        <h3 className="title teritary font-5 md:text-4xl text-2xl text-center ml-5 mb-5 mt-11">
+        <h3 className="title teritary font-5 md:text-4xl text-2xl text-center ml-5 mb-5 mt-8">
           <span className="span-title">Amenities: </span>
         </h3>
         <p className="teritary font-2 md:text-xl text-lg md:w-3/5 m-auto mb-5">
@@ -103,7 +103,7 @@ export default function About() {
         <div className="MVV">
           {/* Mission statement */}
           <div className="mission md:ml-32">
-            <h3 className="teritary font-2 md:text-3xl text-2xl md:text-center text-left mb-5 mt-11">
+            <h3 className="teritary font-2 md:text-3xl text-2xl md:text-center text-left mb-5 mt-8">
               {" "}
               Mission Statement
             </h3>
@@ -115,7 +115,7 @@ export default function About() {
           </div>
           {/* Vision statement */}
           <div className="vision">
-            <h3 className="teritary font-2 md:text-3xl text-2xl md:text-center text-left mb-5 mt-11">
+            <h3 className="teritary font-2 md:text-3xl text-2xl md:text-center text-left mb-5 mt-8">
               {" "}
               Vision Statement
             </h3>
@@ -124,7 +124,7 @@ export default function About() {
             </p>
           </div>
           <div className="values">
-            <h3 className="teritary font-2 md:text-3xl text-2xl md:text-center text-left mb-5 mt-11">
+            <h3 className="teritary font-2 md:text-3xl text-2xl md:text-center text-left mb-5 mt-8">
               {" "}
               Values
             </h3>
@@ -141,11 +141,11 @@ export default function About() {
       </section>
 
       <section className="FOIP md:w-max md:m-auto" id="foip">
-        <h3 className="title teritary font-5 md:text-4xl text-2xl text-center mb-5 mt-11">
+        <h3 className="title teritary font-5 md:text-4xl text-2xl text-center mb-5 mt-8">
           <span className="span-title">Privacy/FOIP </span>
         </h3>
 
-        <h3 className="teritary font-2 md:text-3xl text-2xl text-center mb-5 mt-11">
+        <h3 className="teritary font-2 md:text-3xl text-2xl text-center mb-5 mt-8">
           {" "}
           Click{" "}
           <a href={foip}>
@@ -162,7 +162,7 @@ export default function About() {
         </h3>
 
         <div className="flex md:justify-around md:flex-row flex-col md:ml-32">
-          <div className="teritary font-2 md:text-lg md:text-left text-base mb-5 md:mt-11">
+          <div className="teritary font-2 md:text-lg md:text-left text-base mb-5 md:mt-8">
             <p>McKenzie Towne Council</p>
             <p>40 McKenzie Towne Blvd. S.E.</p>
             <p>Calgary, AB T2Z 4X5</p>
@@ -196,7 +196,7 @@ export default function About() {
 
         <Form />
 
-        <h3 className="teritary font-2 md:text-xl text-base text-center mb-5 mt-11 italic">
+        <h3 className="teritary font-2 md:text-xl text-base text-center mb-5 mt-8 italic">
           McKenzie Towne Community Association (MTCA) is not located at McKenzie
           Towne Council. If you require more information, email MTCA directly at
           feedback@mckenzietownecommunityassociation.ca or visit our webpage at
