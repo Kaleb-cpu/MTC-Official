@@ -213,12 +213,12 @@ each Nav link has its own animation
   border-right-color: var(--teritary);
   transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
 }
-.aroundTown:hover::after {
+/* .aroundTown:hover::after {
   border-bottom-color: var(--teritary);
   border-left-color: var(--teritary);
   transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s,
     height 0.25s ease-out 0.75s;
-}
+} */
 
 .btn {
   font-size: var(--navbar-font-size) !important;
@@ -382,4 +382,22 @@ each Nav link has its own animation
   .Nav-items {
     height: auto;
   }
+}
+
+/* .dropdown-toggle::before {
+
+    margin-left: .255em;
+    vertical-align: 1.2em;
+    content: "";
+  
+  } */
+
+    /* .aroundTown::before {
+    
+    bottom: 18px;
+} */
+
+.aroundTown::after {
+  
+  bottom: 18px;
 }

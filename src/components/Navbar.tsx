@@ -53,6 +53,14 @@ function Navbar() {
               </Link>
             </li>
             <li className="Nav-items">
+              {/* <select name="" id="">
+                <option value="">Around Towne</option>
+                <option value="">Ice Surface</option>
+                <option value="">Political Contacts</option>
+                <option value="">Ponds & Pathways</option>
+                <option value="">Emergency</option>
+                <option value="">Crime Stats</option>
+              </select> */}
               <Dropdown>
                 <Dropdown.Toggle
                   className="Nav-links aroundTown"
