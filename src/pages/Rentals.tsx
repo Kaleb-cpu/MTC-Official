@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { SetStateAction, useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import first from '../../public/media/rental-photos/01.jpg'
 import second from '../../public/media/rental-photos/02.jpg'
@@ -13,7 +13,7 @@ import FacilityImage from "../../public/media/FacilityImage.png"
 
     const [index, setIndex] = useState(0);
   
-    const handleSelect = (selectedIndex) => {
+    const handleSelect = (selectedIndex: SetStateAction<number>) => {
       setIndex(selectedIndex);
     };
     return (
