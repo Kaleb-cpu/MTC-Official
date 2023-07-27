@@ -1,5 +1,6 @@
 import foip from "../../public/media/documents/MTC_Privacy_Policy.pdf";
-import Form from "../components/Form";
+import ContactForm from "../components/Form";
+
 
 export default function About() {
   return (
@@ -194,7 +195,7 @@ export default function About() {
           </div>
         </div>
 
-        <Form />
+        <ContactForm />
 
         <h3 className="teritary font-2 md:text-xl text-base text-center mb-5 mt-8 italic">
           McKenzie Towne Community Association (MTCA) is not located at McKenzie

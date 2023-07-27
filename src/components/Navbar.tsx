@@ -84,7 +84,7 @@ function Navbar() {
                     <Link to="/Emergency"> Emergency</Link>
                   </Dropdown.Item>
                   <Dropdown.Item>
-                    <Link to="/Crime Stats"> Crime Stats</Link>
+                    <Link to="/CrimeStats"> Crime Stats</Link>
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>

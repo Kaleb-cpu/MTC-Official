@@ -362,3 +362,15 @@
 .browse:hover {
   transform: scale(1.2);
 }
+
+.Content {
+  overflow: hidden;
+  background-color: #E5E7DD;
+  position: sticky !important; 
+  top: 0;
+  width: 100%;
+}
+
+.rentalContent {
+  position: relative;
+}

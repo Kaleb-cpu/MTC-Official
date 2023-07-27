@@ -10,13 +10,15 @@ import Rentals from "./pages/Rentals";
 import ResidentInfo from "./pages/ResidentInfo";
 import PageNotFound from "./pages/PageNotFound";
 
+
 // Around towne dropdown pages
 
 import IceSurface from "./pages/Ice Surface";
 import PondsPathways from "./pages/Ponds Pathways";
 import Emergency from "./pages/Emergency";
 import PoliticalContacts from "./pages/Political Contacts";
-import CrimeStats from "./pages/Crime Stats";
+import CrimeStats from "./pages/CrimeStats";
+
 
 export default function App() {
   // state variable that represents the selected variable
@@ -74,10 +76,11 @@ export default function App() {
         <Route path="Ponds Pathways" element={<PondsPathways />} />
         <Route path="Emergency" element={<Emergency />} />
         <Route path="Political Contacts" element={<PoliticalContacts />} />
-        <Route path="Crime Stats" element={<CrimeStats />} />
+        <Route path="CrimeStats" element={<CrimeStats />} />
         <Route path="ResidentInfo" element={<ResidentInfo />} />
 
         <Route path="About" element={<About />} />
+        
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />
