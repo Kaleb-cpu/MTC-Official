@@ -9,6 +9,7 @@ import ChildCare from "./pages/Childcare";
 import Rentals from "./pages/Rentals";
 import ResidentInfo from "./pages/ResidentInfo";
 import PageNotFound from "./pages/PageNotFound";
+import Server from "../src/server"
 
 
 // Around towne dropdown pages
@@ -78,6 +79,7 @@ export default function App() {
         <Route path="Political Contacts" element={<PoliticalContacts />} />
         <Route path="CrimeStats" element={<CrimeStats />} />
         <Route path="ResidentInfo" element={<ResidentInfo />} />
+        <Route path="Server" element={<Server />} />
 
         <Route path="About" element={<About />} />
         

@@ -2,7 +2,16 @@ import axios from 'axios';
 import { FieldValues, useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+
+interface Contact {
+  _id: string;
+  name: {
+    phone: string;
+    email: string;
+    message: string;
+  };
+}
 
 const schema = z.object({
   name: z.string().min(3, { message: "Name must be at least 3 characters" }),
@@ -14,10 +23,39 @@ type FormData = z.infer<typeof schema>;
 
 const Form = () => {
 
-  const [selectedEmail, setSelectedEmail] = useState('');
+  // Fetching data
+  const [formData, setFormData] = useState({
+    recipientEmail: '', 
+    name: '',
+    phone: '',
+    email: '',
+    message: '',
+  });
+
+  const handleChange = (e: { target: { name: any; value: any; }; }) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
+    e.preventDefault();
+    try {
+      await axios.post('http://localhost:3000/api/submit-data', formData);
+      console.log('Data sent successfully!');
+      // Handle successful data submission
+    } catch (error) {
+      console.error('Error submitting data:', error);
+      // Handle error
+    }
+  };
+
+
+
+  // const [selectedEmail, setSelectedEmail] = useState('');
   
   const emailOptions = [
     { value: 'gm@mtcouncil.com', label: 'General Manager' },
+    { value: 'kakuj424@gmail.com', label: 'Kaleb' },
     { value: 'president@mtcouncil.com', label: 'Board of Directors' },
     { value: 'officeco@mtcouncil.com', label: 'Office Coordinator' },
     { value: 'pfm@mtcouncil.com', label: 'Parks and Facility Manager (Maintenance)' },
@@ -32,20 +70,20 @@ const Form = () => {
 
   const {
     register,
-    handleSubmit,
     formState: { errors, isValid },
   } = useForm<FormData>({ resolver: zodResolver(schema) });
 
-  const onSubmit = (data: FieldValues) => console.log(data);
+  // const onSubmit = (data: FieldValues) => console.log(data);
 
   return (
-    <form className="formContainer" onSubmit={handleSubmit(onSubmit)}>
+    <form className="formContainer" onSubmit={handleSubmit}>
           <span className="teritary font-2 md:text-2xl text-lg text-left mb-1"> Select Directory:</span>
         <select 
         // value={formData.email} onChange={handleEmailChange}
-        id="emailSelect"
-          value={selectedEmail}
-          onChange={e => setSelectedEmail(e.target.value)}
+        id="recipientEmail"
+        name="recipientEmail" 
+        value={formData.recipientEmail}
+          onChange= {handleChange}
         >
 
           {/* directory options with email as the value, each value defined above ^ in a const */}
@@ -66,6 +104,9 @@ const Form = () => {
           id="name"
           placeholder="Enter Full Name"
           type="text"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
           className="form-control"
         />
 
@@ -74,21 +115,8 @@ const Form = () => {
         )}
       </div>
 
-      <div className="teritary font-2 md:text-2xl text-lg text-left mb-3">
-        <label htmlFor="name" className="form-label">
-          Email Address
-        </label>
-        <input
-          {...register("email", { required: true })}
-          id="email"
-          placeholder="Enter your email address"
-          type="email"
-          required
-          className="form-control"
-        />
-      </div>
 
-      <div className="teritary font-2 md:text-2xl text-lg text-left mb-5">
+      <div className="teritary font-2 md:text-2xl text-lg text-left mb-3">
         <label htmlFor="phone" className="form-label">
           Phone Number
         </label>
@@ -97,6 +125,9 @@ const Form = () => {
           id="tel"
           placeholder="Enter phone number"
           type="number"
+          name="phone"
+          value={formData.phone} 
+          onChange={handleChange}
           className="form-control"
         />
         {errors.tel && (
@@ -104,7 +135,35 @@ const Form = () => {
         )}
       </div>
 
-      <button disabled={!isValid} className="btn btn-primary" type="submit">
+      <div className="teritary font-2 md:text-2xl text-lg text-left mb-5">
+        <label htmlFor="name" className="form-label">
+          Email Address
+        </label>
+        <input
+          {...register("email", { required: true })}
+          id="email"
+          placeholder="Enter your email address"
+          type="email"
+          name="email" 
+          value={formData.email}
+          onChange={handleChange}
+          required
+          className="form-control"
+        />
+      </div>
+      <div className="primary font-2 md:text-2xl text-left mb-8">
+        <textarea 
+        className='w-4/5'
+        name="message"
+        value={formData.message} 
+        onChange={handleChange}>
+        </textarea> 
+      </div>
+      
+
+      <button 
+      // disabled={!isValid} 
+      className="btn btn-primary" type="submit">
         Submit
       </button>
     </form>
