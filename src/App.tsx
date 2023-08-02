@@ -17,8 +17,7 @@ import Server from "../src/server"
 import IceSurface from "./pages/Ice Surface";
 import PondsPathways from "./pages/Ponds Pathways";
 import Emergency from "./pages/Emergency";
-import PoliticalContacts from "./pages/Political Contacts";
-import CrimeStats from "./pages/CrimeStats";
+
 
 
 export default function App() {
@@ -76,8 +75,6 @@ export default function App() {
         <Route path="Ice Surface" element={<IceSurface />} />
         <Route path="Ponds Pathways" element={<PondsPathways />} />
         <Route path="Emergency" element={<Emergency />} />
-        <Route path="Political Contacts" element={<PoliticalContacts />} />
-        <Route path="CrimeStats" element={<CrimeStats />} />
         <Route path="ResidentInfo" element={<ResidentInfo />} />
         <Route path="Server" element={<Server />} />
 

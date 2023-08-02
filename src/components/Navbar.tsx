@@ -74,18 +74,14 @@ function Navbar() {
                     <Link to="/Ice Surface"> Ice Surface</Link>{" "}
                   </Dropdown.Item>
 
-                  <Dropdown.Item>
-                    <Link to="/Political Contacts"> Political Contacts</Link>
-                  </Dropdown.Item>
+                  
                   <Dropdown.Item>
                     <Link to="/Ponds Pathways"> Ponds & Pathways</Link>
                   </Dropdown.Item>
                   <Dropdown.Item>
                     <Link to="/Emergency"> Emergency</Link>
                   </Dropdown.Item>
-                  <Dropdown.Item>
-                    <Link to="/CrimeStats"> Crime Stats</Link>
-                  </Dropdown.Item>
+                 
                 </Dropdown.Menu>
               </Dropdown>
             </li>

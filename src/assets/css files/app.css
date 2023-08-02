@@ -106,7 +106,6 @@
 }
 
 
-
 .card {
   padding: 2em;
 }
@@ -171,7 +170,7 @@
   background-color: var(--secondary);
 }
 
-/* specific to ice surface */
+/* ice surface */
 
 .borderTop {
   border-top: solid 2px var(--fourth);
@@ -343,7 +342,7 @@
 
 .ContactLine {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   background-color: var(--secondary);
   border-radius: 10px;
   margin: 2em 1.3em;
@@ -368,7 +367,7 @@
   background-color: #E5E7DD;
   position: sticky !important; 
   top: 0;
-  width: 100%;
+  width: max-content;
 }
 
 .rentalContent {

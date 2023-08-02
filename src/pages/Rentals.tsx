@@ -24,7 +24,8 @@ import FacilityImage from "../../public/media/FacilityImage.png"
        <h3 className="title teritary font-5 md:text-4xl text-2xl text-center ml-5 mt-8">
           <span className="span-title">Rentals</span> & <span className="span-title">Facility</span>
         </h3>
-      <div className="flex justify-center teritary gap-5 -mt-5 Content">
+        
+      {/* <div className="flex flex-col teritary gap-3 Content">
        <a href="#rentals"> <div className="browse">
           <h3>Rentals</h3>
         </div></a>
@@ -34,7 +35,7 @@ import FacilityImage from "../../public/media/FacilityImage.png"
        <a href="#gazebo"> <div className="browse">
           <h3>Gazebo</h3> 
         </div></a>
-      </div>
+      </div> */}
       
       {/* Rental photo images */}
       <section className='rentalContent'>
