@@ -80,7 +80,7 @@ const Form = () => {
   return (
     <form className="formContainer" onSubmit={handleSubmit}>
           <span className="teritary font-2 md:text-2xl text-lg text-left mb-1"> Select Directory:</span>
-        <select 
+        <select className='p-1 rounded'
         // value={formData.email} onChange={handleEmailChange}
         id="recipientEmail"
         name="recipientEmail" 
@@ -89,7 +89,7 @@ const Form = () => {
         >
 
           {/* directory options with email as the value, each value defined above ^ in a const */}
-          <option value="">-- Select Directory --</option>
+           <option value=""> </option>
           {emailOptions.map(option => (
             <option key={option.value} value={option.value}>
               {option.label}
@@ -137,7 +137,7 @@ const Form = () => {
         )}
       </div>
 
-      <div className="teritary font-2 md:text-2xl text-lg text-left mb-5">
+      <div className="teritary font-2 md:text-2xl text-lg text-left mb-3">
         <label htmlFor="name" className="form-label">
           Email Address
         </label>
@@ -153,10 +153,14 @@ const Form = () => {
           className="form-control"
         />
       </div>
-      <div className="primary font-2 md:text-2xl text-left mb-8">
+      <div className="teritary font-2 md:text-2xl text-lg text-left mb-5">
+        <label 
+        className="form-label"
+        htmlFor="textarea">Message</label>
         <textarea 
-        className='w-4/5'
+        className='form-control'
         name="message"
+        placeholder="Enter your Message here ..."
         value={formData.message} 
         onChange={handleChange}>
         </textarea> 
