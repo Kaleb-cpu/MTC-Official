@@ -1,17 +1,17 @@
 import axios from 'axios';
-import { FieldValues, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
-interface Contact {
-  _id: string;
-  name: {
-    phone: string;
-    email: string;
-    message: string;
-  };
-}
+// interface Contact {
+//   _id: string;
+//   name: {
+//     phone: string;
+//     email: string;
+//     message: string;
+//   };
+// }
 
 const schema = z.object({
   name: z.string().min(3, { message: "Name must be at least 3 characters" }),
@@ -70,7 +70,7 @@ const Form = () => {
 
   const {
     register,
-    formState: { errors, isValid },
+    formState: { errors },
   } = useForm<FormData>({ resolver: zodResolver(schema) });
 
   // const onSubmit = (data: FieldValues) => console.log(data);
