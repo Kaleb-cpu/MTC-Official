@@ -4,6 +4,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from 'react';
 
+
 // interface Contact {
 //   _id: string;
 //   name: {
@@ -42,6 +43,7 @@ const Form = () => {
     try {
       await axios.post('http://localhost:3000/api/submit-data', formData);
       console.log('Data sent successfully!');
+      window.location.href = "/Success";
       // Handle successful data submission
     } catch (error) {
       console.error('Error submitting data:', error);

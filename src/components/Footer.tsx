@@ -6,6 +6,7 @@ import { BsInstagram } from "react-icons/bs";
 import { BsFacebook } from "react-icons/bs";
 import foip from "../../public/media/documents/MTC_Privacy_Policy.pdf";
 
+
 function Footer() {
   return (
     <div className="mt-10">

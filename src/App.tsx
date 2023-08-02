@@ -10,6 +10,7 @@ import Rentals from "./pages/Rentals";
 import ResidentInfo from "./pages/ResidentInfo";
 import PageNotFound from "./pages/PageNotFound";
 import Server from "../src/server"
+import Success from "./pages/Success"
 
 
 // Around towne dropdown pages
@@ -80,6 +81,7 @@ export default function App() {
 
         <Route path="About" element={<About />} />
         
+        <Route path="Success" element={<Success />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />
