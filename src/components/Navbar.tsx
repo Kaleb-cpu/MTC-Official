@@ -53,38 +53,16 @@ function Navbar() {
               </Link>
             </li>
             <li className="Nav-items">
-              {/* <select name="" id="">
-                <option value="">Around Towne</option>
-                <option value="">Ice Surface</option>
-                <option value="">Political Contacts</option>
-                <option value="">Ponds & Pathways</option>
-                <option value="">Emergency</option>
-                <option value="">Crime Stats</option>
-              </select> */}
-              <Dropdown>
-                <Dropdown.Toggle
-                  className="Nav-links aroundTown"
-                  id="dropdown-basic"
-                >
-                  <div> Around Towne </div>
-                </Dropdown.Toggle>
-
-                <Dropdown.Menu>
-                  <Dropdown.Item>
-                    <Link to="/Ice Surface"> Ice Surface</Link>{" "}
-                  </Dropdown.Item>
-
-                  
-                  <Dropdown.Item>
-                    <Link to="/Ponds Pathways"> Ponds & Pathways</Link>
-                  </Dropdown.Item>
-                  <Dropdown.Item>
-                    <Link to="/Emergency"> Emergency</Link>
-                  </Dropdown.Item>
-                 
-                </Dropdown.Menu>
-              </Dropdown>
+              <Link
+                to="/Explore"
+                className="Nav-links childcare"
+                onClick={closeMobileMenu}
+              >
+                {" "}
+                Explore{" "}
+              </Link>
             </li>
+            
 
             <li className="Nav-items">
               <Link

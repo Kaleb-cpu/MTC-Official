@@ -61,7 +61,7 @@ body {
   background-image: linear-gradient(
     to bottom,
     transparent,
-    rgb(31, 59, 98, 0.8)
+    rgb(31, 59, 98, 0.5)
   );
   display: block;
   position: absolute;

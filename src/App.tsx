@@ -15,8 +15,8 @@ import Success from "./pages/Success"
 
 // Around towne dropdown pages
 
-import IceSurface from "./pages/Ice Surface";
-import PondsPathways from "./pages/Ponds Pathways";
+import Explore from "./pages/Explore";
+
 import Emergency from "./pages/Emergency";
 
 
@@ -73,8 +73,7 @@ export default function App() {
           }
         />
 
-        <Route path="Ice Surface" element={<IceSurface />} />
-        <Route path="Ponds Pathways" element={<PondsPathways />} />
+        <Route path="Explore" element={<Explore />} />
         <Route path="Emergency" element={<Emergency />} />
         <Route path="ResidentInfo" element={<ResidentInfo />} />
         <Route path="Server" element={<Server />} />
