@@ -1,5 +1,3 @@
-import { SetStateAction, useState } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
 import MyCarousel from '../components/rentalPhotosCarousel'
 
 import RentalGuide from '../../public/media/rental-photos/RentalGuide.png'
@@ -9,11 +7,7 @@ import FacilityImage from "../../public/media/FacilityImage.png"
   
   export default function Rentals() {
 
-    const [index, setIndex] = useState(0);
-  
-    const handleSelect = (selectedIndex: SetStateAction<number>) => {
-      setIndex(selectedIndex);
-    };
+    
     return (
     <div className="rentalsContainer">
 
@@ -23,19 +17,7 @@ import FacilityImage from "../../public/media/FacilityImage.png"
           <span className="span-title">Rentals</span> & <span className="span-title">Facility</span>
         </h3>
         
-      {/* <div className="flex flex-col teritary gap-3 Content">
-       <a href="#rentals"> <div className="browse">
-          <h3>Rentals</h3>
-        </div></a>
-        <a href="#facilities"><div className="browse">
-          <h3>Facility Information</h3>
-        </div></a>
-       <a href="#gazebo"> <div className="browse">
-          <h3>Gazebo</h3> 
-        </div></a>
-      </div> */}
-      
-      {/* Rental photo images */}
+
       <section className='rentalContent'>
 <section id='rentals' className='mb-10'>
       

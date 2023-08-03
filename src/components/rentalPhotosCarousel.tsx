@@ -1,4 +1,3 @@
-import React from 'react';
 import { Carousel } from 'react-bootstrap';
 
 import o1 from '../../public/media/rental-photos/01.jpg'
