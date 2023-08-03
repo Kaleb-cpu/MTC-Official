@@ -37,10 +37,13 @@ const Form = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   
   const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     try {
+      setIsSubmitting(true); // Disable the button
       await axios.post('http://localhost:3000/api/submit-data', formData);
       console.log('Data sent successfully!');
       window.location.href = "/Success";
@@ -48,6 +51,8 @@ const Form = () => {
     } catch (error) {
       console.error('Error submitting data:', error);
       // Handle error
+    } finally {
+      setIsSubmitting(false); // Enable the button
     }
   };
 
@@ -86,6 +91,7 @@ const Form = () => {
         name="recipientEmail" 
         value={formData.recipientEmail}
           onChange= {handleChange}
+          onBlur={handleChange}
         >
 
           {/* directory options with email as the value, each value defined above ^ in a const */}
@@ -109,6 +115,7 @@ const Form = () => {
           name="name"
           value={formData.name}
           onChange={handleChange}
+          onBlur={handleChange}
           className="form-control"
         />
 
@@ -130,6 +137,7 @@ const Form = () => {
           name="phone"
           value={formData.phone} 
           onChange={handleChange}
+          onBlur={handleChange}
           className="form-control"
         />
         {errors.tel && (
@@ -149,6 +157,7 @@ const Form = () => {
           name="email" 
           value={formData.email}
           onChange={handleChange}
+          onBlur={handleChange}
           required
           className="form-control"
         />
@@ -162,12 +171,16 @@ const Form = () => {
         name="message"
         placeholder="Enter your Message here ..."
         value={formData.message} 
-        onChange={handleChange}>
+        onChange={handleChange}
+        onBlur={handleChange}
+        >
         </textarea> 
       </div>
       
 
       <button 
+      // Disable the button when submitting
+  disabled={isSubmitting}
       // disabled={!isValid} 
       className="btn btn-primary" type="submit">
         Submit
