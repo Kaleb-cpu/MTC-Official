@@ -7,7 +7,7 @@ export default function Hero() {
   const [currentState, setCurrentState] = useState(0);
   useEffect(() => {
     const timer = setTimeout(() => {
-      if (currentState === 2) {
+      if (currentState === 3) {
         setCurrentState(0);
       } else {
         setCurrentState(currentState + 1);
@@ -35,7 +35,7 @@ export default function Hero() {
         <div className="hero-background-color"></div>{" "}
       </div>
       <div className="description">
-        <h1 className="shadow font-home">Welcome HOME</h1>
+        <h1 className="shadow font-home home">Welcome HOME</h1>
 
         {/* <div className="carousel">
             {imageSlide.map((imageSlide, currentState) => (

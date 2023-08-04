@@ -96,17 +96,6 @@ export default function Home() {
             </Card.Body>
           </Card>
 
-          {/* third card
-    <Card className="card-parent" style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={Garage_Sale} />
-      <Card.Body>
-        <Card.Title>Garage Sale</Card.Title>
-        <Card.Text>
-          Advertise your Garage Sale
-        </Card.Text>
-        <Button variant="primary"><a href="">Garage sale</a></Button>
-      </Card.Body>
-    </Card> */}
         </div>
       </section>
     </>

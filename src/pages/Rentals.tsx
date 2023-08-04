@@ -1,4 +1,4 @@
-import MyCarousel from '../components/rentalPhotosCarousel'
+import MyCarousel from '../assets/data files/rentalPhotosCarousel'
 
 import RentalGuide from '../../public/media/rental-photos/RentalGuide.png'
 import RentalGuideBook from "../../public/media/Rental_Guide_Book.pdf"
