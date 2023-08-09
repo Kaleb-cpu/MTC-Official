@@ -237,6 +237,7 @@ export default function About() {
             <p>Calgary, AB T2Z 4X5</p>
             <p>Phone: (403) 781-6612</p>
             <p>Fax: (403) 930-1551</p>
+            <p>Service request: <span className="hover:bg-black hover:rounded-md p-1 fourth"><a href="https://mtcouncil.com/"> mtcouncil.com</a></span></p>
 
             <h3 className="font-bold mt-10 mb-3 fourth">
               Customer Service Hours:
@@ -268,12 +269,6 @@ export default function About() {
 
         <ContactForm />
 
-        <h3 className="teritary font-2 md:text-xl text-base text-center mb-5 mt-8 italic">
-          McKenzie Towne Community Association (MTCA) is not located at McKenzie
-          Towne Council. If you require more information, email MTCA directly at
-          feedback@mckenzietownecommunityassociation.ca or visit our webpage at
-          www.mckenzietownecommunityassociation.ca
-        </h3>
       </section>
     </div>
   );

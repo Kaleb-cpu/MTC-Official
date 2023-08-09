@@ -4,6 +4,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from 'react';
 import { db } from "../firebase"; // Adjust the path to your firebase.ts file
+import { sendEmail } from "../components/sendEmail"
 
 
 
@@ -48,6 +49,16 @@ const Form = () => {
     try {
       setIsSubmitting(true); // Disable the button
       await db.collection('Contact').add(formData);
+
+//  // Send email to the selected recipient
+//  await sendEmail(formData.recipientEmail, {
+//   name: formData.name,
+//   phone: formData.phone,
+//   email: formData.email,
+//   message: formData.message,
+// });
+
+
       setFormData ({
         recipientEmail: '', 
     name: '',
@@ -117,7 +128,7 @@ const Form = () => {
         </select>
       <div className="teritary font-2 md:text-2xl text-lg text-left mb-3 mt-3">
         <label htmlFor="name" className="form-label">
-          Name
+          Name:
         </label>
         <input
           {...register("name")}
@@ -139,7 +150,7 @@ const Form = () => {
 
       <div className="teritary font-2 md:text-2xl text-lg text-left mb-3">
         <label htmlFor="phone" className="form-label">
-          Phone Number
+          Phone Number:
         </label>
         <input
           {...register("tel", { valueAsNumber: true })}
@@ -159,7 +170,7 @@ const Form = () => {
 
       <div className="teritary font-2 md:text-2xl text-lg text-left mb-3">
         <label htmlFor="name" className="form-label">
-          Email Address
+          Email Address:
         </label>
         <input
           {...register("email", { required: true })}
@@ -177,7 +188,7 @@ const Form = () => {
       <div className="teritary font-2 md:text-2xl text-lg text-left mb-5">
         <label 
         className="form-label"
-        htmlFor="textarea">Message</label>
+        htmlFor="textarea">Message:</label>
         <textarea 
         className='form-control'
         name="message"
@@ -194,7 +205,7 @@ const Form = () => {
       // Disable the button when submitting
   disabled={isSubmitting}
       // disabled={!isValid} 
-      className="btn btn-primary" type="submit">
+      className="btn btn-primary text-2xl" type="submit">
         Submit
       </button>
     </form>

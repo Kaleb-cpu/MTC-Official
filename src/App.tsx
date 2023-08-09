@@ -16,7 +16,6 @@ import Success from "./pages/Success"
 // Around towne dropdown pages
 
 import Explore from "./pages/Explore";
-
 import Emergency from "./pages/Emergency";
 
 
@@ -32,9 +31,6 @@ export default function App() {
       Fresident: "$1125",
       P2resident: "$450",
       P3resident: "$675",
-      FnonResident: "$1175",
-      P2nonResident: "$470",
-      P3nonResident: "$705",
     },
     {
       id: 2,
@@ -42,15 +38,8 @@ export default function App() {
       Fresident: "$925",
       P2resident: "$370",
       P3resident: "$555",
-      FnonResident: "$975",
-      P2nonResident: "$390",
-      P3nonResident: "$585",
     },
   ]);
-
-  // const [defaultState] = useState([
-  //   { id: 1, ageGroup: "", Fresident: "", FnonResident: "" },
-  // ]);
 
   const visibleExpenses = selectedAgeGroup
     ? ageLists.filter((e) => e.ageGroup === selectedAgeGroup)

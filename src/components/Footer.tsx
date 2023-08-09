@@ -16,7 +16,7 @@ function Footer() {
             <div className="row justify-between align-items-center">
               <div className="pb-6">
                
-                <p className="teritary md:w-3/5 w-4/5 m-auto font-2 text-lg">McKenzie Towne Council (MTC) acknowledges the traditional territories of the Blackfoot and the people of the Treaty 7 Region in Southern Alberta, which includes the Piikani, Kainai and Siksika Nations; the Stoney-Nakoda, including the Chiniki, Bearspaw and Wesley First Nations; and the Tsuut’ina Nation. The City of Chestermere is also home to the Métis Nation of Alberta, Region 3.</p>
+                <p className="teritary md:w-3/5 w-4/5 m-auto font-2 text-lg">McKenzie Towne Council (MTC), within the city of Calagry acknowledges the traditional territories of the Blackfoot and the people of the Treaty 7 Region in Southern Alberta, which includes the Piikani, Kainai and Siksika Nations; the Stoney-Nakoda, including the Chiniki, Bearspaw and Wesley First Nations; and the Tsuut’ina Nation. McKenzie Towne Council (MTC), within the city of Calagry is also home to the Métis Nation of Alberta, Region 3.</p>
               </div>
               <div className="col-lg-4">
                 <ul className="list-unstyled nav-links nav-left mb-4 mb-lg-0">

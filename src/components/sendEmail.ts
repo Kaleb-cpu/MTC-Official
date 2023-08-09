@@ -1,8 +1,5 @@
 import * as functions from "firebase-functions";
 import * as nodemailer from "nodemailer";
-import * as admin from "firebase-admin";
-
-admin.initializeApp();
 
 const transporter = nodemailer.createTransport({
   service: "Gmail",

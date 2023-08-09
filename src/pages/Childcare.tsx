@@ -11,9 +11,6 @@ interface List {
   Fresident: string;
   P2resident: string;
   P3resident: string;
-  FnonResident: string;
-  P2nonResident: string;
-  P3nonResident: string;
 }
 
 const ChildCare = ({ onSelectageGroup, ageLists }: Props) => {
@@ -80,17 +77,17 @@ const ChildCare = ({ onSelectageGroup, ageLists }: Props) => {
             {ageLists?.map((ageList) => (
               <div key={ageList.id} className="childcareCost">
                 <div>
-                  <li>Resident:{ageList.Fresident}</li>
-                  <li>Non-Resident:{ageList.FnonResident}</li>
+                  <li>MTC Resident: {ageList.Fresident}</li>
+                 
                 </div>
                 <div>
-                  <li>Resident:{ageList.P3resident}</li>
-                  <li>Non-Resident:{ageList.P3nonResident}</li>
+                  <li>MTC Resident: {ageList.P3resident}</li>
+                  
                 </div>
 
                 <div>
-                  <li>Resident:{ageList.P2resident}</li>
-                  <li>Non-Resident:{ageList.P2nonResident}</li>
+                  <li>MTC Resident: {ageList.P2resident}</li>
+                  
                 </div>
               </div>
             ))}
