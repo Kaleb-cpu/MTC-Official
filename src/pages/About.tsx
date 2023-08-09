@@ -1,6 +1,6 @@
 import foip from "../../public/media/documents/MTC_Privacy_Policy.pdf";
 import ReportCrime from "../../public/media/documents/how_to_report_a_crime.pdf"
-import ContactForm from "../components/Form";
+import Form from "../components/Form";
 
 
 export default function About() {
@@ -267,7 +267,7 @@ export default function About() {
           </div>
         </div>
 
-        <ContactForm />
+        <Form />
 
       </section>
     </div>

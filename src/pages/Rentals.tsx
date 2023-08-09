@@ -1,4 +1,4 @@
-import MyCarousel from '../assets/data files/rentalPhotosCarousel'
+import RentalCarousel from '../assets/data files/rentalPhotosCarousel'
 
 import RentalGuide from '../../public/media/rental-photos/RentalGuide.png'
 import RentalGuideBook from "../../public/media/Rental_Guide_Book.pdf"
@@ -10,18 +10,29 @@ import FacilityImage from "../../public/media/FacilityImage.png"
     
     return (
     <div className="rentalsContainer">
+        <section id='facilities'>
+        <h3 className="title teritary font-5 md:text-4xl text-2xl text-center ml-5 mt-10">
+          <span className="span-title">Facility</span> Information
+        </h3>
+        <p className='teritary font-2 w-4/5 md:text-xl text-base m-auto text-left pb-5'>Located at 40 McKenzie Towne Boulevard, at the traffic circle, McKenzie Towne Hall is a central amenity that offers a versatile space for recreation activities, meetings, events, and rental space. The 16,000 sq. ft. building boasts a 125-seating capacity Banquet Hall (divisible into 2 or 3 separate rooms), perfect for weddings, anniversaries, birthday parties, and much more. It also contains a gymnasium, excellent for sports activities and large events. The administrative offices and maintenance department of the McKenzie Towne Council are also housed in this building</p>
+        
+        <img className='m-auto' src={FacilityImage} alt="Facility image" />
+        <br />
+        </section>
 
 
+
+<div className='border-top w-11/12 m-auto'></div>
 
        <h3 className="title teritary font-5 md:text-4xl text-2xl text-center ml-5 mt-8">
           <span className="span-title">Rentals</span> & <span className="span-title">Facility</span>
         </h3>
         
+      <RentalCarousel/>
 
       <section className='rentalContent'>
 <section id='rentals' className='mb-10'>
       
-      <MyCarousel/>
 
           <div>
 
@@ -37,17 +48,6 @@ import FacilityImage from "../../public/media/FacilityImage.png"
         </h3>
         <h2 className='font-2 md:text-4xl text-2xl text-center teritary'>click <a className='fourth hover:font-semibold' href={RentalPolicies}>Here</a> to view our Rental Policies</h2>
         </div>
-        </section>
-
-<div className='border-top w-11/12 m-auto'></div>
-        <section id='facilities'>
-        <h3 className="title teritary font-5 md:text-4xl text-2xl text-center ml-5 mt-10">
-          <span className="span-title">Facility</span> Information
-        </h3>
-        <p className='teritary font-2 w-4/5 md:text-xl text-base m-auto text-left pb-5'>Located at 40 McKenzie Towne Boulevard, at the traffic circle, McKenzie Towne Hall is a central amenity that offers a versatile space for recreation activities, meetings, events, and rental space. The 16,000 sq. ft. building boasts a 125-seating capacity Banquet Hall (divisible into 2 or 3 separate rooms), perfect for weddings, anniversaries, birthday parties, and much more. It also contains a gymnasium, excellent for sports activities and large events. The administrative offices and maintenance department of the McKenzie Towne Council are also housed in this building</p>
-        
-        <img className='m-auto' src={FacilityImage} alt="Facility image" />
-        <br />
         </section>
         <div className='border-top w-11/12 m-auto'></div>
 

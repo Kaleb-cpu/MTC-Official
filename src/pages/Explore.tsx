@@ -1,8 +1,62 @@
 import Carousel from 'react-bootstrap/Carousel';
 
-import northSide from "../../public/media/northSide.png"
-import southSide from "../../public/media/southSide.png"
+import northSide from "../../public/media/ExplorePhotos/northSide.png"
+import southSide from "../../public/media/ExplorePhotos/southSide.png"
+import eastArm from "../../public/media/ExplorePhotos/eastArm.png"
+import invernessGate from "../../public/media/ExplorePhotos/invernessGate.png"
+import mckenzieTownGate from "../../public/media/ExplorePhotos/mckenzieTownGate.png"
+import prestwickGate from "../../public/media/ExplorePhotos/prestwick.png"
+import westArm from "../../public/media/ExplorePhotos/westArm.png"
+
+
 import StormPond from "../../public/media/StormPond.png";
+
+const PondcarouselData = [
+  { id: 1,
+      title: 'Prestwick Storm Pond & Pathway:',
+      description: 'Located on the north side of McKenzie Towne Blvd, the pathway is .93 miles or 1.5 kilometers around.',
+      imageUrl: northSide,
+    },
+    {
+      id: 2,
+      title: 'Inverness Storm Pond & Pathway:',
+      description: 'Located south of Promenade Way, the pathway is 1.47 miles or 2.37 kilometers around.',
+      imageUrl: southSide,
+    },
+  ]
+
+  const TrafficCarouselData = [
+    { id: 1,
+        title: 'Entering from the East arm of McKenzie Towne Blvd:',
+        description: '',
+        imageUrl: eastArm,
+      },
+      {
+        id: 2,
+        title: 'Entering from McKenzie Towne Gate:',
+        description: '',
+        imageUrl: mckenzieTownGate,
+      },
+      { id: 3,
+        title: 'Entering from Inverness Gate:',
+        description: '',
+        imageUrl: invernessGate,
+      },
+      {
+        id: 4,
+        title: 'Entering from the West arm of McKenzie Towne Blvd:',
+        description: '',
+        imageUrl: westArm,
+      },
+      {
+        id: 5,
+        title: 'Entering from Prestwick Boulevard:',
+        description: '',
+        imageUrl: prestwickGate,
+      },
+      
+
+    ]
 
 export default function Explore() {
   return (
@@ -48,6 +102,35 @@ export default function Explore() {
       </div>
 
       <div className="borderTop mt-10 mb-10"></div>
+
+      <h3 className="title teritary font-5 md:text-4xl text-2xl text-center ml-5 mb-5 mt-11">
+        <span className="span-title">McKenzie Towne </span>
+        Roundabout
+      </h3>
+
+<div>
+      <Carousel className='carousel-parent'>
+        {TrafficCarouselData.map((item) => (
+          <Carousel.Item key={item.id}>
+            <img
+              className="d-block w-100"
+              src={item.imageUrl}
+              alt={`Slide ${item.id}`}
+            />
+
+            {/* you can uncomment if you want to describe the photos in the carousel */}
+            <Carousel.Caption>
+              <h3 className='md:text-2xl text-xl teritary font-bold'>{item.title}</h3>
+              {/* <p>{item.description}</p> */}
+            </Carousel.Caption> 
+          </Carousel.Item>
+        ))}
+      </Carousel>
+      
+</div>
+
+
+      <div className="borderTop mt-10 mb-10"></div>
       <div className='mb-7'>
       <h3 className="title teritary font-5 md:text-4xl text-2xl text-center ml-5 mb-5 mt-11">
         <span className="span-title">Ponds  </span>
@@ -76,30 +159,26 @@ export default function Explore() {
         </div>
       </div>
 
-<div className='w-1/2 m-auto'>
-      <Carousel className="carousel-parent">
-            <Carousel.Item className="carousel-item" interval={4000}>
-              <img className="d-block" src={northSide} alt="First slide" />
-              <Carousel.Caption>
-                <h3>Prestwick Storm Pond & Pathway:</h3>
-                <p>Located on the north side of McKenzie Towne Blvd, the pathway is .93 miles or 1.5 kilometers around.</p>
-                {/* <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item className="carousel-item" interval={4000}>
-              <img
-                className="d-block"
-                src={southSide}
-                alt="Second slide"
-              />
-              <Carousel.Caption>
-                <h3>Inverness Storm Pond & Pathway:</h3>
-                <p>Located south of Promenade Way, the pathway is 1.47 miles or 2.37 kilometers around.</p>
-                {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
-              </Carousel.Caption>
-            </Carousel.Item>
-            
-          </Carousel>
+<div>
+
+<Carousel>
+        {PondcarouselData.map((item) => (
+          <Carousel.Item key={item.id}>
+            <img
+              className="d-block w-100"
+              src={item.imageUrl}
+              alt={`Slide ${item.id}`}
+            />
+
+            {/* you can uncomment if you want to describe the photos in the carousel */}
+            <Carousel.Caption>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </Carousel.Caption> 
+          </Carousel.Item>
+        ))}
+      </Carousel>
+      
 </div>
 
 <div className='borderTop mt-10 mb-10'></div>
@@ -176,11 +255,6 @@ export default function Explore() {
         <span className="span-title">Poison & Drug Information Services: </span>1-800-332-1414 24Hrs
       </h3>
       </div>
-
-
-
-
-
 
 
       </div>

@@ -205,7 +205,7 @@ const Form = () => {
       // Disable the button when submitting
   disabled={isSubmitting}
       // disabled={!isValid} 
-      className="btn btn-primary text-2xl" type="submit">
+      className="fourth md:text-4xl text-xl hover:bg-yellow-700 hover:text-blue-200 bg-gray-800 rounded-md p-1 " type="submit">
         Submit
       </button>
     </form>
