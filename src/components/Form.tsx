@@ -1,8 +1,10 @@
-import axios from 'axios';
+// import axios from 'axios';
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from 'react';
+import { db } from "../firebase"; // Adjust the path to your firebase.ts file
+
 
 
 // interface Contact {
@@ -33,9 +35,10 @@ const Form = () => {
     message: '',
   });
 
-  const handleChange = (e: { target: { name: any; value: any; }; }) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+  
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -44,7 +47,16 @@ const Form = () => {
     e.preventDefault();
     try {
       setIsSubmitting(true); // Disable the button
-      await axios.post('http://localhost:3000/api/submit-data', formData);
+      await db.collection('Contact').add(formData);
+      setFormData ({
+        recipientEmail: '', 
+    name: '',
+    phone: '',
+    email: '',
+    message: '',
+      }
+
+      )
       console.log('Data sent successfully!');
       window.location.href = "/Success";
       // Handle successful data submission
@@ -91,7 +103,7 @@ const Form = () => {
         name="recipientEmail" 
         value={formData.recipientEmail}
           onChange= {handleChange}
-          onBlur={handleChange}
+          // onBlur={handleChange}
         >
 
           {/* directory options with email as the value, each value defined above ^ in a const */}
