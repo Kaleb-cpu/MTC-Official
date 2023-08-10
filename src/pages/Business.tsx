@@ -27,7 +27,7 @@ const businesses: Business[] = [
   // Add more businesses as needed
 ];
 
-const BusinessPage: React.FC = () => {
+const Business: React.FC = () => {
   return (
     // <div>
     //   <h1>Business Listings</h1>
@@ -94,4 +94,4 @@ const BusinessPage: React.FC = () => {
   );
 };
 
-export default BusinessPage;
+export default Business;

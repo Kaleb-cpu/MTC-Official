@@ -10,6 +10,7 @@ import Rentals from "./pages/Rentals";
 import ResidentInfo from "./pages/ResidentInfo";
 import PageNotFound from "./pages/PageNotFound";
 import Server from "../src/server"
+import Business from "./pages/Business"
 import Success from "./pages/Success"
 
 
@@ -68,6 +69,7 @@ export default function App() {
         <Route path="Server" element={<Server />} />
 
         <Route path="About" element={<About />} />
+        <Route path="Business" element={<Business />} />
         
         <Route path="Success" element={<Success />} />
         <Route path="*" element={<PageNotFound />} />

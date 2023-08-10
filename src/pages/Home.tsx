@@ -2,7 +2,7 @@
 import Hero from "../components/Hero";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../assets/css files/home.css";
-import BusinessPage from "../components/businessPage"
+import BusinessPage from "./Business";
 
 // import images
 // import Garage_Sale from "../../public/media/updates/Garage_Sale.png";
@@ -96,10 +96,9 @@ export default function Home() {
               </Button>
             </Card.Body>
           </Card>
-
         </div>
       </section>
-      <BusinessPage/>
+      <BusinessPage />
     </>
   );
 }

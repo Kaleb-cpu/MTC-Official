@@ -84,6 +84,17 @@ function Navbar() {
                 About{" "}
               </Link>
             </li>
+
+            <li className="Nav-items">
+              <Link
+                to="/Business"
+                className="Nav-links about"
+                onClick={closeMobileMenu}
+              >
+                {" "}
+                Business{" "}
+              </Link>
+            </li>
           </ul>
         </nav>
       </section>

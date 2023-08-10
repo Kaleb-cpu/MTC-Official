@@ -1,7 +1,7 @@
 import foip from "../../public/media/documents/MTC_Privacy_Policy.pdf";
-import ReportCrime from "../../public/media/documents/how_to_report_a_crime.pdf"
+import ReportCrime from "../../public/media/documents/how_to_report_a_crime.pdf";
 import Form from "../components/Form";
-import BusinessPage from "../components/businessPage"
+import BusinessPage from "./Business";
 
 export default function About() {
   return (
@@ -158,49 +158,80 @@ export default function About() {
         </h3>
       </section>
 
-{/* Political Contacts */}
+      {/* Political Contacts */}
 
-<section id="PoliticalContacts" > 
-
-          <h3 className="title teritary font-5 md:text-4xl text-2xl text-center mb-5 mt-8">
+      <section id="PoliticalContacts">
+        <h3 className="title teritary font-5 md:text-4xl text-2xl text-center mb-5 mt-8">
           <span className="span-title">Political Contacts </span>
         </h3>
 
         <div className="ContactLine">
-      
-      <h3 className="teritary font-5 md:text-2xl text-lg text-left ml-5 mb-5 mt-11">
-        <span className="span-title">City of Calgary - Councillor - Ward #12: <br /></span><a className="hover:text-yellow-400" href="https://www.calgary.ca/council/ward-12/warddefault.html"> Evan Spencer - Ward 12 contact information.</a>
-      </h3>
-     
+          <h3 className="teritary font-5 md:text-2xl text-lg text-left ml-5 mb-5 mt-11">
+            <span className="span-title">
+              City of Calgary - Councillor - Ward #12: <br />
+            </span>
+            <a
+              className="hover:text-yellow-400"
+              href="https://www.calgary.ca/council/ward-12/warddefault.html"
+            >
+              {" "}
+              Evan Spencer - Ward 12 contact information.
+            </a>
+          </h3>
 
-      
-      <h3 className="teritary font-5 md:text-2xl text-lg text-left ml-5 mb-5 mt-11">
-        <span className="span-title">Province of Alberta - MLA for Calgary-Hays: <br /> </span> <a className="hover:text-yellow-400" href="https://www.assembly.ab.ca/home?p=mla_contact&rnumber=16&leg=29"> Ric McIver- Legislature and Constituency Offices contact information.</a>
-      </h3>
-      
+          <h3 className="teritary font-5 md:text-2xl text-lg text-left ml-5 mb-5 mt-11">
+            <span className="span-title">
+              Province of Alberta - MLA for Calgary-Hays: <br />{" "}
+            </span>{" "}
+            <a
+              className="hover:text-yellow-400"
+              href="https://www.assembly.ab.ca/home?p=mla_contact&rnumber=16&leg=29"
+            >
+              {" "}
+              Ric McIver- Legislature and Constituency Offices contact
+              information.
+            </a>
+          </h3>
 
-      
-      <h3 className="teritary font-5 md:text-2xl text-lg text-left ml-5 mb-5 mt-11">
-        <span className="span-title">Parliament of Canada - Calgary Shepard: <br />  </span><a className="hover:text-yellow-400" href="https://www.parl.ca/">Tom Kmiec - Hill and Constituency Offices contact information.</a>
-      </h3>
-      
+          <h3 className="teritary font-5 md:text-2xl text-lg text-left ml-5 mb-5 mt-11">
+            <span className="span-title">
+              Parliament of Canada - Calgary Shepard: <br />{" "}
+            </span>
+            <a className="hover:text-yellow-400" href="https://www.parl.ca/">
+              Tom Kmiec - Hill and Constituency Offices contact information.
+            </a>
+          </h3>
 
-      
-      <h3 className="teritary font-5 md:text-2xl text-lg text-left ml-5 mb-5 mt-11">
-        <span className="span-title">City of Calgary Public School Board Trustee: <br /> </span> <a className="hover:text-yellow-400" href="https://www.cbe.ab.ca/about-us/board-of-trustees/Pages/Wards-12-and-14.aspx">Charlene May - Wards 12 & 14 contact information.</a>
-      </h3>
-    
-      <h3 className="teritary font-5 md:text-2xl text-lg text-left ml-5 mb-5 mt-11">
-        <span className="span-title">City of Calgary Catholic School Board Trustee: <br /> </span> <a className="hover:text-yellow-400" href="https://www.cssd.ab.ca/ccsd-trustees/cathie-williams/"> Acclaimed - Wards 11 & 12 contact information.</a>
-      </h3>
-      </div>
-</section>
+          <h3 className="teritary font-5 md:text-2xl text-lg text-left ml-5 mb-5 mt-11">
+            <span className="span-title">
+              City of Calgary Public School Board Trustee: <br />{" "}
+            </span>{" "}
+            <a
+              className="hover:text-yellow-400"
+              href="https://www.cbe.ab.ca/about-us/board-of-trustees/Pages/Wards-12-and-14.aspx"
+            >
+              Charlene May - Wards 12 & 14 contact information.
+            </a>
+          </h3>
 
+          <h3 className="teritary font-5 md:text-2xl text-lg text-left ml-5 mb-5 mt-11">
+            <span className="span-title">
+              City of Calgary Catholic School Board Trustee: <br />{" "}
+            </span>{" "}
+            <a
+              className="hover:text-yellow-400"
+              href="https://www.cssd.ab.ca/ccsd-trustees/cathie-williams/"
+            >
+              {" "}
+              Acclaimed - Wards 11 & 12 contact information.
+            </a>
+          </h3>
+        </div>
+      </section>
 
-{/* Crims stats */}
-<section id="CrimeStats">
-
-<h3 className="title teritary font-5 md:text-4xl text-2xl text-center mb-5 mt-8">
+      {/* Crims stats */}
+      <section id="CrimeStats">
+        <h3 className="title teritary font-5 md:text-4xl text-2xl text-center mb-5 mt-8">
           <span className="span-title">Crime statistics </span>
         </h3>
 
@@ -217,14 +248,13 @@ export default function About() {
           {" "}
           <a href="https://mycalgary.com/crime-statistics/mckenzie-towne-crime-activity-update/">
             {" "}
-            
           </a>{" "}
-          You can find Crime statistics <span className="hover:text-white text-blue-500">here </span>{" "}
+          You can find Crime statistics{" "}
+          <span className="hover:text-white text-blue-500">here </span>{" "}
         </h3>
+      </section>
 
-</section>
-
-{/* Contact us */}
+      {/* Contact us */}
       <section className="contact-us" id="contact-us">
         <h3 className="title teritary font-5 md:text-4xl text-2xl ml-5 mb-10 pt-11">
           <span className="span-title">Contact US </span>
@@ -237,7 +267,12 @@ export default function About() {
             <p>Calgary, AB T2Z 4X5</p>
             <p>Phone: (403) 781-6612</p>
             <p>Fax: (403) 930-1551</p>
-            <p>Service request: <span className="hover:bg-black hover:rounded-md p-1 fourth"><a href="https://mtcouncil.com/"> mtcouncil.com</a></span></p>
+            <p>
+              Service request:{" "}
+              <span className="hover:bg-black hover:rounded-md p-1 fourth">
+                <a href="https://mtcouncil.com/"> mtcouncil.com</a>
+              </span>
+            </p>
 
             <h3 className="font-bold mt-10 mb-3 fourth">
               Customer Service Hours:
@@ -252,10 +287,8 @@ export default function About() {
             <p>Monday to Friday - 8:00 AM to 4:00 PM</p>
           </div>
 
-
-
           <div className="FormMap">
-            <iframe 
+            <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20123.208210909914!2d-113.98200864308807!3d50.91629823780583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537177bd9271a861%3A0xebe84e3db73d7cc4!2sMcKenzie%20Towne%2C%20Calgary%2C%20AB!5e0!3m2!1sen!2sca!4v1686606867274!5m2!1sen!2sca"
               width="600"
               height="450"
@@ -268,8 +301,6 @@ export default function About() {
         </div>
 
         <Form />
-<BusinessPage />
-
       </section>
     </div>
   );
