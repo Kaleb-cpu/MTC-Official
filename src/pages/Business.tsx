@@ -1,5 +1,5 @@
 import sobeys from "../../public/media/businessListing/sobeys.jpeg"
-import studentWorks from "../../public/media/businessListing/studentWorks.png"
+
 
 interface Business {
   id: number;
@@ -22,7 +22,7 @@ const businesses: Business[] = [
     name: 'Example Business 2',
     description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
     address: '456 Elm St, Town, Country',
-    imageUrl: studentWorks,
+    imageUrl: sobeys,
   },
   // Add more businesses as needed
 ];
