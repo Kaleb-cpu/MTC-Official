@@ -4,18 +4,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from 'react';
 import { db } from "../firebase"; // Adjust the path to your firebase.ts file
-// import { sendEmail } from "../components/sendEmail"
 
-
-
-// interface Contact {
-//   _id: string;
-//   name: {
-//     phone: string;
-//     email: string;
-//     message: string;
-//   };
-// }
 
 const schema = z.object({
   name: z.string().min(3, { message: "Name must be at least 3 characters" }),
@@ -38,31 +27,53 @@ const Form = () => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>): void => {
     const { name, value } = e.target;
-  
+    
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
   };
   
-
+  
   const [isSubmitting, setIsSubmitting] = useState(false);
-
+  
   
   const handleSubmit = async (e: { preventDefault: () => void; }) => {
-    e.preventDefault();
-    try {
-      setIsSubmitting(true); // Disable the button
-      await db.collection('Contact').add(formData);
 
-//  // Send email to the selected recipient
-//  await sendEmail(formData.recipientEmail, {
-//   name: formData.name,
-//   phone: formData.phone,
-//   email: formData.email,
-//   message: formData.message,
-// });
+    
 
+    
+      // // Configure the email content
+      // const mailOptions = {
+      //   from: formData.email,
+      //   to: formData.recipientEmail, // Use the selected recipient email
+      //   subject: 'Contact Form Submission',
+      //   text: `Name: ${formData.name}\nPhone: ${formData.phone}\nMessage: ${formData.message}`,
+      // };
+    
+    
+    //  // Send the email
+    //  await transporter.sendMail(mailOptions);
+    
+    
+    
+        e.preventDefault();
+        try {
+          setIsSubmitting(true); // Disable the button
+          const docRef = await db.collection('Contact').add(formData);
+    
+    
+        // Trigger the email using the Trigger Email extension
+        await docRef.collection('ext.trigger-email').add({
+          to: formData.recipientEmail,
+          template: 'New Contact Form', // Specify the name of your email template
+          data: {
+            name: formData.name,
+            phone: formData.phone,
+            email: formData.email,
+            message: formData.message,
+          },
+        });
 
       setFormData ({
         recipientEmail: '', 

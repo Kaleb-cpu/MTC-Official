@@ -14,5 +14,11 @@
         "npm --prefix \"$RESOURCE_DIR\" run build"
       ]
     }
-  ]
+  ],
+
+  "extensions": {
+    "firebase-ext-trigger-email": {
+      
+    }
+  }
 }
