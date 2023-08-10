@@ -1,7 +1,7 @@
 import foip from "../../public/media/documents/MTC_Privacy_Policy.pdf";
 import ReportCrime from "../../public/media/documents/how_to_report_a_crime.pdf";
 import Form from "../components/Form";
-import BusinessPage from "./Business";
+
 
 export default function About() {
   return (
