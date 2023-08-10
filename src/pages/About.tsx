@@ -1,7 +1,7 @@
 import foip from "../../public/media/documents/MTC_Privacy_Policy.pdf";
 import ReportCrime from "../../public/media/documents/how_to_report_a_crime.pdf"
 import Form from "../components/Form";
-
+import BusinessPage from "../components/businessPage"
 
 export default function About() {
   return (
@@ -268,6 +268,7 @@ export default function About() {
         </div>
 
         <Form />
+<BusinessPage />
 
       </section>
     </div>

@@ -4,7 +4,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from 'react';
 import { db } from "../firebase"; // Adjust the path to your firebase.ts file
-import { sendEmail } from "../components/sendEmail"
+// import { sendEmail } from "../components/sendEmail"
 
 
 
@@ -36,8 +36,13 @@ const Form = () => {
     message: '',
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>): void => {
+    const { name, value } = e.target;
+  
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
   };
   
 
